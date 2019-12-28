@@ -4,7 +4,7 @@
 <body class="">
     @include('partials.sidebar')
     @include('partials.navbar')
-    <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
+    <div class="header bg-gradient-primary pb-5 pt-5 ">
     </div>
     @yield('content')
     

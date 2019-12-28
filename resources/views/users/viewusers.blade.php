@@ -1,6 +1,6 @@
 @extends('template.template2')
 @section('content')
-<div class="container-fluid mt--9">
+<div class="container-fluid">
     <div class="row mt-5">
       <div class="col-xl-8 mb-5 mb-xl-0">
         <div class="card shadow">

@@ -92,7 +92,8 @@ body {
   line-height: 1.5;
   color: #525f7f;
   text-align: left;
-  background-color: #f8f9fe;
+  background-color: lightgray;
+  /* background-color: #f8f9fe; */
 }
 
 [tabindex="-1"]:focus {
@@ -15876,7 +15877,8 @@ a.btn-icon-only {
 }
 
 .footer {
-  background: #f7fafc;
+  background: lightgrey;
+  /* background: #f7fafc; */
   padding: 2.5rem 0;
 }
 

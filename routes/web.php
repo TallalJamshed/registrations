@@ -13,12 +13,14 @@
 
 Route::get('/', function () {
     return view('home1');
-});
+})->name('home');
 
 Auth::routes();
 
 Route::get('/viewusers', 'HomeController@viewuser')->name('viewuser');
+Route::get('/addusers', 'HomeController@adduser')->name('adduser');
+
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');

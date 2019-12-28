@@ -18,23 +18,30 @@
   $('.dropdown-btn').click(function(){
     $(this).toggleClass("active");
     $('.dropdown-btn').not(this).removeClass("active");
-    // var dropdownContent = $(this).siblings();
-    // console.log($(this).next().css( "display"));
-    // if ($(this).next().css( "display") === "block") {
-    //   $(this).next().toggle("slow");
-    // } else {
-      $(this).next().toggle("slow");
-      $('.dropdown-btn').not(this).next().css( "display","none");
-    // }
-
-  });
-  var dropdown = $('.dropdown-btn');
-    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-    // var dropdown = document.getElementsByClassName("dropdown-btn");
-    var i;
+    $(this).next().toggle("slow");
+    $('.dropdown-btn').not(this).next().css( "display","none");
+    var btn = $this;
     
-    for (i = 0; i < dropdown.length; i++) {
-      dropdown[i].addEventListener("click", function() {
+  });
+  $(document).ready(function(){
+      // alert();
+      console.log($('a.active').parent());
+      if($('a.active').parent('.dropdown-container').length){
+        $('a.active').parent().toggle("slow");
+      }else{
+        console.log('false');
+      }
+      // alert($('a.active').html());
+      // btn.toggleClass("active");
+      // $('.dropdown-btn').not(btn).removeClass("active");
+      // btn.next().toggle("slow");
+      // $('.dropdown-btn').not(btn).next().css( "display","none");
+    });
+  // var dropdown = $('.dropdown-btn');
+  //   var i;
+    
+  //   for (i = 0; i < dropdown.length; i++) {
+  //     dropdown[i].addEventListener("click", function() {
         // dropdown.classList.toggle("active");
       // this.classList.toggle("active");
       // this.classList.toggle("active");
@@ -46,7 +53,7 @@
       // } else {
       // dropdownContent.style.display = "block";
       // }
-      });
-    }
-    </script>
+      // });
+    // }
+</script>
     

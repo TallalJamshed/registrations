@@ -90,15 +90,15 @@
         <!-- Navigation -->
         <ul class="navbar-nav">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-btn active" href="#"> <i class="fa fa-home text-primary"></i>Home</a>
+            <a class="nav-link dropdown-btn @if(\Request::route()->getName() == 'home') active @endif" href="{{route('home')}}"> <i class="fa fa-home text-primary"></i>Home</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-btn" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fas fa-user-friends text-blue"></i> Manage Users <i class="fa fa-caret-down dropbtn"></i>
             </a>
             <div class="dropdown-container">
-              <a class="dropdown-item" href="{{route('viewuser')}}">View Users</a>
-              <a class="dropdown-item" href="#">Add Users</a>
+              <a class="dropdown-item @if(\Request::route()->getName() == 'viewuser') active @endif" href="{{route('viewuser')}}">View Users</a>
+              <a class="dropdown-item @if(\Request::route()->getName() == 'adduser') active @endif" href="{{route('adduser')}}">Add Users</a>
             </div>
           </li>
           <li class="nav-item dropdown">
