@@ -106,7 +106,7 @@
               <i class="fas fa-school text-orange"></i> Manage Schools <i class="fa fa-caret-down dropbtn"></i>
             </a>
             <div class="dropdown-container">
-              <a class="dropdown-item" href="#">View Schools</a>
+              <a class="dropdown-item" href="{{route('showschool')}}">View Schools</a>
               <a class="dropdown-item" href="#">Add Schools</a>
             </div>
           </li>
@@ -124,12 +124,14 @@
               <i class="fas fa-map-marker-alt text-red"></i> Manage Locations <i class="fa fa-caret-down dropbtn"></i>
             </a>
             <div class="dropdown-container">
-              <a class="dropdown-item" href="#">View Cities</a>
+              <a class="dropdown-item" href="{{route('showlocform')}}">Add Location</a>
+              <a class="dropdown-item" href="{{route('showloctables')}}">View Location</a>
+              {{-- <a class="dropdown-item" href="#">View Cities</a>
               <a class="dropdown-item" href="#">View Areas</a>
               <a class="dropdown-item" href="#">View SubAreas</a>
               <a class="dropdown-item" href="#">Add Cities</a>
               <a class="dropdown-item" href="#">Add Areas</a>
-              <a class="dropdown-item" href="#">Add SubAreas</a>
+              <a class="dropdown-item" href="#">Add SubAreas</a> --}}
             </div>
           </li>
           <li class="nav-item">

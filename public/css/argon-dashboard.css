@@ -6849,7 +6849,8 @@ button.bg-primary:focus {
 }
 
 .bg-secondary {
-  background-color: #f7fafc !important;
+  /* background-color: #f7fafc !important; */
+  background-color: #e6e6ff !important
 }
 
 a.bg-secondary:hover,
