@@ -21,7 +21,7 @@ Route::get('/viewusers', 'HomeController@viewuser')->name('viewuser');
 Route::get('/addusers', 'HomeController@adduser')->name('adduser');
 
 // locations
-Route::get('/location/add','LocationController@showLocationForm')->name('showlocform');
+Route::get('/location/form','LocationController@showLocationForm')->name('showlocform');
 
 Route::post('/location/addpov','LocationController@addProvinceInDb')->name('addprovince');
 Route::post('/location/addcity','LocationController@addCityInDb')->name('addcity');
@@ -30,12 +30,27 @@ Route::post('/location/addsubarea','LocationController@addSubAreaInDb')->name('a
 
 Route::get('/location/view','LocationController@showAllLocations')->name('showloctables');
 
+// geo locator
+Route::get('/geolocator/view','LocationController@showGeoLocatorPage')->name('showgeolocator');
+
+//news - events
+Route::get('/news/view','NewsEventController@showNewsPage')->name('shownews');
+Route::get('/news/add','NewsEventController@addNewsPage')->name('addnews');
+
+
 // schools
 Route::get('/school/view','SchoolController@showAllSchools')->name('showschool');
+Route::get('/school/form','SchoolController@createSchoolsForm')->name('createschoolform');
+Route::post('/school/add','SchoolController@addSchoolInDb')->name('addschoolindb');
+Route::post('/school/addbranch','SchoolController@addSchoolBranchInDb')->name('addschoolbranchindb');
+Route::post('/getschool','SchoolController@getSchools');
+
 
 // ajax
 Route::post('/cities' , 'LocationController@getCitiesByProvince')->name('getcity');
 Route::post('/areas' , 'LocationController@getAreasByCity')->name('getarea');
+Route::post('/subareas' , 'LocationController@getSubAreasByArea')->name('getsubarea');
+
 
 
 

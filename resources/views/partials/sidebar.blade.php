@@ -107,7 +107,7 @@
             </a>
             <div class="dropdown-container">
               <a class="dropdown-item" href="{{route('showschool')}}">View Schools</a>
-              <a class="dropdown-item" href="#">Add Schools</a>
+              <a class="dropdown-item" href="{{route('createschoolform')}}">Add Schools</a>
             </div>
           </li>
           <li class="nav-item">
@@ -141,7 +141,7 @@
             <div class="dropdown-container">
               <a class="dropdown-item" href="#">View news</a>
               <a class="dropdown-item" href="#">view Events</a>
-              <a class="dropdown-item" href="#">Add News</a>
+              <a class="dropdown-item" href="{{route('shownews')}}">Add News</a>
               <a class="dropdown-item" href="#">Add Events</a>
 
             </div>
@@ -161,7 +161,7 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link dropdown-btn" href="#">
+          <a class="nav-link dropdown-btn" href="{{route('showgeolocator')}}">
               <i class="fas fa-map-marked-alt text-purple"></i> School Geo Locator <i class="fa fa-caret-down dropbtn"></i>
             </a>
           </li>

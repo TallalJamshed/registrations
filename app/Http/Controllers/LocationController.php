@@ -84,4 +84,14 @@ class LocationController extends Controller
         $areas = Area::select('area_id','area_name')->where('fk_city_id',$request->fk_city_id)->get();
         return $areas;
     }
+
+    public function getSubAreasByArea(Request $request)
+    {
+        $subareas = Subarea::select('subarea_id','subarea_name')->where('fk_area_id',$request->fk_area_id)->get();
+        return $subareas;
+    }
+
+    public function showGeoLocatorPage(){
+        return view('geolocator.viewgeolocator');
+    }
 }

@@ -13,30 +13,30 @@
                         <tr>
                             <th scope="col">Serial No</th>
                             <th scope="col">School Name</th>
-                            <th scope="col">School Branch</th>
-                            <th scope="col">City Name</th>
+                            <th scope="col">School Address</th>
+                            {{-- <th scope="col">City Name</th> --}}
                         </tr>
                     </thead>
                     <tbody>
                         @php
                             $serial = 0;
                         @endphp
-                    {{-- @foreach ($locations as $location) --}}
+                    @foreach ($schools as $school)
                         <tr>
                             <th scope="row">
                                 {{++$serial}}
                             </th>
                             <td>
-                                {{-- {{ $location->province_name}} --}}
+                                {{$school->school_name}}({{$school->sc_br_name}})
                             </td>
                             <td>
-                                {{-- {{ $location->city_name}} --}}
+                                {{$school->sc_br_address}}, {{$school->fk_subarea_id}}
                             </td>
                             <td>
-                                {{-- {{ $location->area_name}} --}}
+                                {{-- {{$location->area_name}} --}}
                             </td>
                         </tr>
-                    {{-- @endforeach --}}
+                    @endforeach
                     </tbody>
                 </table>
             </div>
