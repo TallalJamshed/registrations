@@ -16,7 +16,7 @@ class CreateNewsEventsTable extends Migration
         Schema::create('news_events', function (Blueprint $table) {
             $table->bigIncrements('msg_id');
             $table->string('msg_title');
-            $table->string('message');
+            $table->string('newsevent_message');
             $table->string('status');
             $table->string('type');
             $table->string('thumbnail_string');

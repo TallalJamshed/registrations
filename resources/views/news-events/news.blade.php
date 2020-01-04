@@ -3,7 +3,7 @@
 
 {{-- Adding School Branch--}}
 <div class="container-fluid mb-5">
-    <form  method="POST" action="{{route('addschoolbranchindb')}}">
+    <form  method="POST" action="{{route('addnews')}}">
         @csrf
         <div class="col-xl-12 order-xl-1 mt-5">
             <div class="card bg-secondary shadow">
@@ -21,19 +21,19 @@
                     <div class="row mt-4">
                         <div class="col-md-6">
                             <div class="col-md-4">
-                                <label style="font-weight:bold" class="" for="sc_br_name">News Title</label>
+                                <label style="font-weight:bold" class="" for="msg_title">News Title</label>
                             </div>
                             <div class="col-md-8">
-                                <input type="text" id="sc_br_name" name="sc_br_name" class="disable_on_sc_id form-control form-control-alternative" 
+                                <input type="text" id="msg_title" name="msg_title" class="form-control form-control-alternative" 
                                 placeholder="News Title">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="col-md-4">
-                                <label style="font-weight:bold" class="" for="no_of_boys">News Thumbnail</label>
+                                <label style="font-weight:bold" class="" for="thumbnail_string">News Thumbnail</label>
                             </div>
                             <div class="col-md-8">
-                                <input type="text" id="no_of_boys" name="no_of_boys" class="disable_on_sc_id form-control form-control-alternative" 
+                                <input type="file" id="thumbnail_string" name="thumbnail_string" class="form-control form-control-alternative" 
                                 placeholder="News Image">
                             </div>
                         </div>
@@ -41,16 +41,28 @@
                     <div class="row mt-4">
                         <div class="col-md-12">
                             <div class="col-md-4">
-                                <label style="font-weight:bold" class="" for="sc_br_address">News Message</label>
+                                <label style="font-weight:bold" class="" for="newsevent_message">News Message</label>
                             </div>
-                            <div class="col-md-8">
-                                <input type="text" id="sc_br_address" name="sc_br_address" class="disable_on_sc_id form-control form-control-alternative" 
-                                placeholder="News Message">
+                            <div class="col-md-6">
+                                <textarea name="newsevent_message" id="newsevent_message" class="form-control" rows="3"></textarea>
+                                {{-- <input type="text" id="newsevent_message" name="newsevent_message" class="form-control form-control-alternative" 
+                                placeholder="News Message"> --}}
                             </div>
                         </div>
-                    </div>
-                    <div class="row mt-4">
-                        
+                    {{-- </div>
+                    <div class="row mt-4"> --}}
+                        {{-- <div class="col-md-6">
+                            <div class="col-md-4">
+                                <label style="font-weight:bold" class="" for="fk_province_id">Select Province</label>
+                            </div>
+                            <div class="col-md-8">
+                                <select class="form-control form-control-alternative povselect" id="fk_province_id" name="fk_province_id">
+                                    <option value="1">Active</option>
+                                    <option value="2">De-Activated</option>
+                                    
+                                  </select>
+                            </div>
+                        </div> --}}
                     </div>
 
                 </div>

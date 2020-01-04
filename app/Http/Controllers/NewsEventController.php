@@ -7,13 +7,17 @@ use Illuminate\Http\Request;
 
 class NewsEventController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     public function showNewsPage()
     {
         return view('news-events.news');
     }
 
-    public function create()
+    public function addNewsPage()
     {
         //
     }

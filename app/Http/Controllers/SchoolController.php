@@ -10,6 +10,11 @@ use Session;
 
 class SchoolController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function getSchools(Request $request){
         $schools = schoolbranch::select('latitude','longitude','school_name')
                                     ->join('schools','schools.school_id','schoolbranches.fk_school_id')
@@ -20,8 +25,10 @@ class SchoolController extends Controller
     public function showAllSchools()
     {
         $schools = school::join('schoolbranches','schools.school_id','schoolbranches.fk_school_id')
-                            // ->join('subareas','schoolbranches.fk_subarea_id','subareas.subarea_id')
-                            // ->join('subareas','schoolbranches.fk_subarea_id','subareas.subarea_id')
+                            ->join('subareas','schoolbranches.fk_subarea_id','subareas.subarea_id')
+                            ->join('areas','subareas.fk_area_id','areas.area_id')
+                            ->join('institutestatus','institutestatus.status_id','schoolbranches.sc_br_status')
+                            ->join('cities','areas.fk_city_id','cities.city_id')
                             ->get();
         return view('schools.viewschools')->with('schools',$schools);
     }

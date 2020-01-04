@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
                 AreaTableSeeder::class , 
                 SubareaTableSeeder::class,
                 SchoolTableSeeder::class,
+                StatusTableSeeder::class,
             ]
         );
     }

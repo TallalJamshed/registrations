@@ -31,9 +31,12 @@
           data.forEach(element => {
             marker = new google.maps.Marker({
               position: new google.maps.LatLng(element.latitude, element.longitude),
-              map: map
+              map: map,
+              icon: {                             
+                  url: "{{asset('img/pin_blue_1.png')}}"                       
+                  }
             });
-
+            // "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
             google.maps.event.addListener(marker, 'mouseover', (function(marker, i) {
               return function() {
                 infowindow.setContent(element.school_name);

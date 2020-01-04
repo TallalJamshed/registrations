@@ -110,7 +110,7 @@
               <a class="dropdown-item" href="{{route('createschoolform')}}">Add Schools</a>
             </div>
           </li>
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a class="nav-link dropdown-btn" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="far fa-registered text-yellow"></i> Registrations <i class="fa fa-caret-down dropbtn"></i>
             </a>
@@ -118,7 +118,7 @@
               <a class="dropdown-item" href="#">School Registration</a>
               <a class="dropdown-item" href="#">NGO Registration</a>
             </div>
-          </li>
+          </li> --}}
           <li class="nav-item">
             <a class="nav-link dropdown-btn" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fas fa-map-marker-alt text-red"></i> Manage Locations <i class="fa fa-caret-down dropbtn"></i>
@@ -166,9 +166,23 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link dropdown-btn" href="#">
+            {{-- <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a> --}}
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+            <a class="nav-link dropdown-btn" href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+                          document.getElementById('logout-form').submit();">
               <i class="fas fa-sign-out-alt "></i> Logout
             </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+              @csrf
+          </form>
           </li>
         </ul>
       </div>

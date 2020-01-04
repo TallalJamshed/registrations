@@ -11,6 +11,10 @@ use Session;
 
 class LocationController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     
     public function showLocationForm()
     {
