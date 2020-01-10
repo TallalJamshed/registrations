@@ -18,18 +18,11 @@
                             <th scope="col">Principal Contact</th>
                             <th scope="col">Status</th>
                             <th scope="col">Actions</th>
-                            
                         </tr>
                     </thead>
                     <tbody>
-                        {{-- @php
-                            $serial = 0;
-                        @endphp --}}
                     @foreach ($schools as $school)
                         <tr>
-                            {{-- <th scope="row">
-                                {{++$serial}}
-                            </th> --}}
                             <td>
                                 {{$school->school_name}}({{$school->sc_br_name}})
                             </td>
@@ -51,8 +44,8 @@
                                 {{$school->status_name}}
                             </td>
                             <td>
-                                <button class="btn btn-sm btn-warning"><i class="fas fa-pencil-alt"></i></button>
-                                <button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button>
+                                <span class="btn btn-sm btn-warning"><i class="fas fa-pencil-alt"></i></span>
+                                <span class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></span>
                             </td>
                         </tr>
                     @endforeach

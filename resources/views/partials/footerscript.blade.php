@@ -27,7 +27,7 @@
           'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
         success:function(data){
-          console.log(data);
+          // console.log(data);
           data.forEach(element => {
             marker = new google.maps.Marker({
               position: new google.maps.LatLng(element.latitude, element.longitude),
@@ -43,33 +43,9 @@
                 infowindow.open(map, marker);
               }
             })(marker, i));
-            // console.log(element.latitude);
           });
         },
       });
-      var locations = [
-        ['Dar-e-Arqam', 33.5490148, 73.079546, 4],
-        ['Allied school', 33.5550148, 73.074546, 5],
-        ['F.G.college', 33.5560148, 73.085546, 3],
-        ['Sir Syed College', 33.5670148, 73.096546, 2],
-        ['Fauji Foundation School', 33.5680148, 73.057546, 1]
-      ];
-
-      
-
-      // for (i = 0; i < locations.length; i++) {  
-      //     marker = new google.maps.Marker({
-      //       position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-      //       map: map
-      //     });
-
-      //   google.maps.event.addListener(marker, 'mouseover', (function(marker, i) {
-      //     return function() {
-      //       infowindow.setContent(locations[i][0]);
-      //       infowindow.open(map, marker);
-      //     }
-      //   })(marker, i));
-    //   }
     }
   </script>
 {{-- AIzaSyAGz0uwfCViWX9CfNqFbudJ0Gee5YStCFE --}}
@@ -77,7 +53,142 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGz0uwfCViWX9CfNqFbudJ0Gee5YStCFE&callback=initMap"
     async defer></script>
 
+    <script>
+      var functionisnotcalled;
+        $('#pov_for_subarea').change(function (){
+          drawAreaMap();
+          functionisnotcalled = false;
+        });
+        $('#city_for_subarea').change(function (){
+          if (functionisnotcalled) {
+            drawAreaMap();
+          }
+          functionisnotcalled = false
+        });
+        $('#areaselect').change(function (){
+          if (functionisnotcalled) {
+            drawAreaMap();
+          }
+          functionisnotcalled = false
+        });
+        $('#fk_subarea_id').change(function (){
+          if (functionisnotcalled) {
+            drawAreaMap();
+          }
+          functionisnotcalled = false
+        });
+        $('#school_id').change(function (){
+          if (functionisnotcalled) {
+            drawAreaMap();
+          }else{
+            functionisnotcalled = true;
+          }
+        });
+        
 
+      function drawAreaMap() {
+      
+        var province = $('#pov_for_subarea').val();
+        var city = $('#city_for_subarea').val();
+        var area = $('#areaselect').val();
+        var subarea = $('#fk_subarea_id').val();
+        var school = $('#school_id').val();
+        var infowindow = new google.maps.InfoWindow();
+        var marker, i;
+
+        var geocoder = new google.maps.Geocoder();
+        $.ajax({
+          url:'/getmapdata',
+          type:'post',
+          data:{'province':province , 'city':city ,'area':area ,'subarea':subarea ,'school':school ,_token:'{{csrf_token()}}'},
+          success:(function(data){
+            // console.log(data);
+            var zoom = 7;
+            if (data[0].city != "") {
+              zoom = 10;
+            }
+            if (data[0].area != "") {
+              zoom = 15;
+            }
+            var address = data[0].province.province_name+','+data[0].city.city_name+','+data[0].area.area_name+',pakistan';
+            geocoder.geocode({ 'address' : address }, function(results, status) {
+              if(status == "ZERO_RESULTS") {
+                var address = 'pakistan';
+                geocoder.geocode({ 'address' : address }, function(results, status) {
+                  var mapOptions = {
+                    center: results[0].geometry.bounds.getCenter(),
+                    zoom: zoom,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                  }
+                  var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+                });
+              }else{
+                var mapOptions = {
+                  center: results[0].geometry.bounds.getCenter(),
+                  zoom: zoom,
+                  mapTypeId: google.maps.MapTypeId.ROADMAP,
+                };
+              };
+              var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+              data[0].schools.forEach(element => {
+                  marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(element.latitude, element.longitude),
+                    map: map,
+                    icon: {                             
+                      url: "{{asset('img/pin_blue_1.png')}}"                       
+                    }
+                  });
+                  google.maps.event.addListener(marker, 'mouseover', (function(marker, i) {
+                    return function() {
+                      infowindow.setContent(element.school_name);
+                      infowindow.open(map, marker);
+                    }
+                  })(marker, i));
+              });
+                      
+            });
+          }),
+        });
+      };
+        // var map = new google.maps.Map(document.getElementById('map'), {
+        // zoom: 12,
+        // center: {lat: 33.5714482, lng: 73.0284069}
+        // });
+
+
+     
+      
+      // $.ajax({
+      //   url:'/getschool',
+      //   type: 'post',
+      //   datatype: 'json',
+      //   data:{_token:'{{csrf_token()}}'},
+      //   header:{
+      //     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      //   },
+      //   success:function(data){
+      //     // console.log(data);
+      //     data.forEach(element => {
+      //       marker = new google.maps.Marker({
+      //         position: new google.maps.LatLng(element.latitude, element.longitude),
+      //         map: map,
+      //         icon: {                             
+      //             url: "{{asset('img/pin_blue_1.png')}}"                       
+      //             }
+      //       });
+      //       // "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+      //       google.maps.event.addListener(marker, 'mouseover', (function(marker, i) {
+      //         return function() {
+      //           infowindow.setContent(element.school_name);
+      //           infowindow.open(map, marker);
+      //         }
+      //       })(marker, i));
+      //     });
+      //   },
+      // });
+      // });
+    </script>
   <!-- GMaps PLugin Js -->
   {{-- <script src="{{asset('js/plugins/gmaps/gmaps.js')}}"></script> --}}
 
@@ -93,6 +204,7 @@
         application: "argon-dashboard-free"
       });
   </script>
+
 <script>
   $(document).ready( function () {
     $('#loctable').DataTable({
@@ -100,11 +212,6 @@
     });
   });
 </script>
-{{-- <script>
-  $(document).ready(function(){
-    $('table').filterTable(); //if this code appears after your tables; otherwise, include it in your document.ready() code.
-  });
-</script> --}}
 
 <script>
   $('.dropdown-btn').click(function(){
@@ -116,7 +223,7 @@
   });
   $(document).ready(function(){
       // alert();
-    console.log($('a.active').parent());
+    // console.log($('a.active').parent());
     if($('a.active').parent('.dropdown-container').length){
       $('a.active').parent().toggle("slow");
     }
@@ -133,6 +240,8 @@
     $('.areaselect').select2();
     $('.fk_school_id').select2();
     $('.fk_subarea_id').select2();
+    $('.school_id').select2();
+    
   });
 </script>
 
@@ -152,10 +261,10 @@
   $('.areaselect').change(function(){
     $('#fk_subarea_id').prop('disabled',false)
   });
-  $('.fk_school_id').change(function(){
-    $('.disable_on_sc_id').prop('disabled',false)
-    // $('#sc_br_address').prop('disabled',false)
-  });
+  // $('.fk_school_id').change(function(){
+  //   $('.disable_on_sc_id').prop('disabled',false)
+  //   // $('#sc_br_address').prop('disabled',false)
+  // });
 </script>
 
 
@@ -244,12 +353,49 @@
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
       },
       success:function(data){
+        console.log(data);
         $('.fk_subarea_id').prop('disabled',false);
+        $('.subarea_name').prop('disabled',false);
+
         $('.fk_subarea_id').empty();
+        $('.subarea_name').empty();
+
         $('.fk_subarea_id').change();
-        $('.fk_subarea_id').append(new Option("NA" , "1"));
+        $('.subarea_name').change();
+
+        $('.fk_subarea_id').append(new Option("" , ""));
+        $('.subarea_name').append(new Option("" , ""));
+
         data.forEach(element => {
-          $('.fk_subarea_id').append(new Option(element.subarea_name , element.fk_area_id));
+          $('.fk_subarea_id').append(new Option(element.subarea_name , element.subarea_id));
+          $('.subarea_name').append(new Option(element.subarea_name , element.subarea_id));
+
+        });
+      },
+    })
+  });
+</script>
+
+<script>
+  $('#fk_subarea_id').change(function(){
+    var subarea = $('#fk_subarea_id').val();
+    // alert();
+    $.ajax({
+      url:'/schools',
+      type: 'post',
+      datatype: 'json',
+      data:{'fk_subarea_id': subarea , _token:'{{csrf_token()}}'},
+      header:{
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      },
+      success:function(data){
+        // alert();
+        $('.school_id').prop('disabled',false);
+        $('.school_id').empty();
+        $('.school_id').change();
+        $('.school_id').append(new Option("" , ""));
+        data.forEach(element => {
+          $('.school_id').append(new Option(element.school_name , element.school_id));
         });
       },
     })

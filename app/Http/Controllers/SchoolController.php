@@ -7,6 +7,8 @@ use App\Schoolbranch;
 use App\Province;
 use Illuminate\Http\Request;
 use Session;
+use Illuminate\Support\Facades\validator;
+
 
 class SchoolController extends Controller
 {
@@ -19,6 +21,16 @@ class SchoolController extends Controller
         $schools = schoolbranch::select('latitude','longitude','school_name')
                                     ->join('schools','schools.school_id','schoolbranches.fk_school_id')
                                     ->get();
+        return $schools;
+    }
+
+    public function getSchoolsBySubarea(Request $request){
+        // print_r($request->fk_subarea_id);
+        $schools = schoolbranch::select('school_id','school_name')
+                                    ->join('schools','schools.school_id','schoolbranches.fk_school_id')
+                                    ->where('fk_subarea_id',$request->fk_subarea_id)
+                                    ->get();
+        // $schools = school::where('fk_subarea_id',$request->fk_subarea_id)->get();
         return $schools;
     }
 
@@ -42,23 +54,16 @@ class SchoolController extends Controller
 
     public function addSchoolInDb(Request $request)
     {
+        $rules = ['school_name' => 'Required'];
+        $messages = ['school_name.required' => 'School Name is Required'];
+        $validator = validator::make($request->all() , $rules , $messages)->validate();
+
         $school = new school;
         $school->fill($request->all());     
         $school->save();                                                                                                       
         Session::flash('message','School is added');
         Session::flash('alert-class', 'alert-success'); 
         return redirect()->back();
-    }
-
-    public function addSchoolBranchInDb(Request $request)
-    {
-        $sc_branch = new Schoolbranch;
-        $sc_branch->fill($request->all());     
-        $sc_branch->save();                                                                                                       
-        Session::flash('message','School Branch is added');
-        Session::flash('alert-class', 'alert-success'); 
-        return redirect()->back();
-
     }
 
     public function edit(School $school)

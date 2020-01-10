@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Schoolbranch;
 use Illuminate\Http\Request;
+use App\Http\Requests\SchoolBranchRequest;
+use Illuminate\Support\Facades\validator;
+
 
 class SchoolbranchController extends Controller
 {
@@ -11,77 +14,42 @@ class SchoolbranchController extends Controller
     {
         $this->middleware('auth');
     }
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+
+    public function addSchoolBranchInDb(SchoolBranchRequest $request)
     {
-        //
+        $sc_branch = new Schoolbranch;
+        $sc_branch->fill($request->all());     
+        $sc_branch->save();                                                                                                       
+        Session::flash('message','School Branch is added');
+        Session::flash('alert-class', 'alert-success'); 
+        return redirect()->back();
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Schoolbranch  $schoolbranch
-     * @return \Illuminate\Http\Response
-     */
     public function show(Schoolbranch $schoolbranch)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Schoolbranch  $schoolbranch
-     * @return \Illuminate\Http\Response
-     */
     public function edit(Schoolbranch $schoolbranch)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Schoolbranch  $schoolbranch
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, Schoolbranch $schoolbranch)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Schoolbranch  $schoolbranch
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Schoolbranch $schoolbranch)
     {
         //

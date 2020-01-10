@@ -42,7 +42,7 @@
           <div class="card-header border-0">
             <div class="row align-items-center">
               <div class="col">
-                <h3 class="mb-0">Latest Schools</h3>
+                <h3 class="mb-0">All Schools</h3>
               </div>
               {{-- <div class="col text-right">
                 <a href="#!" class="btn btn-sm btn-primary">See all</a>
@@ -54,38 +54,44 @@
             <table class="table align-items-center table-flush">
               <thead class="thead-light">
                 <tr>
-                  <th scope="col">School name</th>
-                  <th scope="col">City</th>
-                  <th scope="col">Area</th>
-                  <th scope="col">Status</th>
-                </tr>
+                  <th>School Name</th>
+                  <th>School Address</th>
+                  {{-- <th>Principal Name</th> --}}
+                  {{-- <th>Principal Contact</th> --}}
+                  <th>Status</th>
+                  {{-- <th>Actions</th> --}}
+              </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th scope="row">/argon/</th>
-                  <td>4,569</td>
-                  <td>340</td>
-                  <td><i class="fas fa-arrow-up text-success mr-3"></i> 46,53%</td>
-                </tr>
-                <tr>
-                  <th scope="row">/argon/index.html</th>
-                  <td>3,985</td>
-                  <td>319</td>
-                  <td><i class="fas fa-arrow-down text-warning mr-3"></i> 46,53%</td>
-                </tr>
-                <tr>
-                  <th scope="row">/argon/charts.html</th>
-                  <td>3,513</td>
-                  <td>294</td>
-                  <td><i class="fas fa-arrow-down text-warning mr-3"></i> 36,49%</td>
-                </tr>
-                <tr>
-                  <th scope="row">/argon/tables.html</th>
-                  <td>2,050</td>
-                  <td>147</td>
-                  <td><i class="fas fa-arrow-up text-success mr-3"></i> 50,87%</td>
-                </tr>
-              </tbody>
+                @foreach ($schools as $school)
+                    <tr>
+                        <td>
+                            {{$school->school_name}}({{$school->sc_br_name}})
+                        </td>
+                        <td>
+                            {{$school->sc_br_address}},
+                            @if ($school->subarea_name != "NA")
+                                {{$school->subarea_name}},
+                            @endif
+                            {{$school->area_name}},
+                            {{$school->city_name}} 
+                        </td>
+                        {{-- <td>
+                            {{$school->principal_name}}
+                        </td> --}}
+                        {{-- <td>
+                            {{$school->principal_phone}}
+                        </td> --}}
+                        <td>
+                            {{$school->status_name}}
+                        </td>
+                        {{-- <td>
+                            <span class="btn btn-sm btn-warning"><i class="fas fa-pencil-alt"></i></span>
+                            <span class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></span>
+                        </td> --}}
+                    </tr>
+                @endforeach
+                </tbody>
             </table>
           </div>
         </div>
@@ -95,7 +101,7 @@
           <div class="card-header border-0">
             <div class="row align-items-center">
               <div class="col">
-                <h3 class="mb-0">New Users</h3>
+                <h3 class="mb-0">All Users</h3>
               </div>
               {{-- <div class="col text-right">
                 <a href="#!" class="btn btn-sm btn-primary">See all</a>
@@ -109,30 +115,27 @@
                 <tr>
                   <th scope="col">User Name</th>
                   <th scope="col">Email</th>
+                  {{-- <th scope="col">Contact No</th>
+                  <th scope="col">CNIC</th> --}}
                   <th scope="col">Role</th>
+                  {{-- <th scope="col">Action</th> --}}
                 </tr>
               </thead>
               <tbody>
+                @foreach ($users as $user)
                 <tr>
-                  <th scope="row">Facebook</th>
-                  <td>1,480</td>
-                  <td>Temporary user</td>
+                  <th scope="row">{{$user->name}}</th>
+                  <td>{{$user->email}}</td>
+                  {{-- <td>{{$user->contact}}</td>
+                  <td>{{$user->cnic}}</td> --}}
+                  <td>{{$user->role}}</td>
+                  {{-- <td>
+                    <span class="btn btn-sm btn-warning"><i class="fas fa-pencil-alt"></i></span>
+                    <span class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></span>
+                  </td> --}}
                 </tr>
-                <tr>
-                  <th scope="row">Facebook</th>
-                  <td>1,480</td>
-                  <td>Temporary user</td>
-                </tr>
-                <tr>
-                  <th scope="row">Facebook</th>
-                  <td>1,480</td>
-                  <td>Temporary user</td>
-                </tr>
-                <tr>
-                  <th scope="row">Facebook</th>
-                  <td>1,480</td>
-                  <td>Temporary user</td>
-                </tr>
+                @endforeach
+                
               </tbody>
             </table>
           </div>

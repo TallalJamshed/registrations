@@ -16,6 +16,7 @@
                             <th scope="col">City Name</th>
                             <th scope="col">Area Name</th>
                             <th scope="col">Sub-Area Name</th>
+                            <th scope="col">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -38,6 +39,10 @@
                             </td>
                             <td>
                                 {{ $location->subarea_name}}
+                            </td>
+                            <td>
+                                <span class="btn btn-sm btn-warning"><i class="fas fa-pencil-alt"></i></span>
+                                <span class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></span>
                             </td>
                         </tr>
                     @endforeach

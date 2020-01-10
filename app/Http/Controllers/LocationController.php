@@ -6,6 +6,9 @@ use App\Area;
 use App\Subarea;
 use App\Province;
 use App\City;
+use App\School;
+
+use Illuminate\Support\Facades\validator;
 use Illuminate\Http\Request;
 use Session;
 
@@ -39,6 +42,10 @@ class LocationController extends Controller
 
     public function addProvinceInDb(Request $request)
     {
+        $rules = ['province_name' => 'Required'];
+        $messages = ['province_name.required' => 'Province Name is Required'];
+        $validator = validator::make($request->all() , $rules , $messages)->validate();
+
         $province = new Province;
         $province->fill($request->all());
         $province->save();
@@ -49,6 +56,17 @@ class LocationController extends Controller
 
     public function addCityInDb(Request $request)
     {
+        $rules = [
+            'fk_province_id' => 'Required|exists:provinces,province_id',
+            'city_name' => 'Required' ,
+        ];
+        $messages = [
+            'fk_province_id.required' => 'Province Name is Required',
+            'fk_province_id.exists' => 'Province Id does not exists in database',
+            'city_name.required' => 'City Name is Required' ,
+        ];
+        $validator = validator::make($request->all() , $rules , $messages)->validate();
+
         $city = new City;
         $city->fill($request->all());
         $city->save();
@@ -59,6 +77,20 @@ class LocationController extends Controller
 
     public function addAreaInDb(Request $request)
     {
+        $rules = [
+            'fk_province_id' => 'Required|exists:provinces,province_id',
+            'fk_city_id' => 'Required|exists:cities,city_id',
+            'area_name' => 'Required',
+        ];
+        $messages = [
+            'fk_province_id.required' => 'Province Name is Required',
+            'fk_province_id.exists' => 'Province Id does not exists in database',
+            'fk_city_id.required' => 'City Name is Required',
+            'fk_city_id.exists' => 'City Id does not exists in database',
+            'area_name.required' => 'Area Name is Required',
+        ];
+        $validator = validator::make($request->all() , $rules , $messages)->validate();
+
         $area = new Area;
         $area->fill($request->all());
         $area->save();
@@ -69,6 +101,10 @@ class LocationController extends Controller
 
     public function addSubAreaInDb(Request $request)
     {
+        $rules = ['subarea_name' => 'Required'];
+        $messages = ['subarea_name.required' => 'Sub-Area Name is Required'];
+        $validator = validator::make($request->all() , $rules , $messages)->validate();
+
         $subarea = new Subarea;
         $subarea->fill($request->all());
         $subarea->save();
@@ -96,6 +132,59 @@ class LocationController extends Controller
     }
 
     public function showGeoLocatorPage(){
-        return view('geolocator.viewgeolocator');
+        $provinces = province::get();
+        return view('geolocator.viewgeolocator')->with('provinces',$provinces);
+    }
+
+    public function getMapLocation(Request $request){
+        $province = ""; $city = ""; $area = ""; $subarea = "";
+        if(!empty($request->province)){
+            $province = province::select('province_name')->where('province_id',$request->province)->first();
+            $schools  = school::select('school_name','sc_br_name','latitude','longitude')
+                                ->join('schoolbranches','schools.school_id','schoolbranches.fk_school_id')
+                                ->join('subareas','subareas.subarea_id','schoolbranches.fk_subarea_id')
+                                ->join('areas','areas.area_id','subareas.fk_area_id')
+                                ->join('cities','cities.city_id','areas.fk_city_id')
+                                ->join('provinces','provinces.province_id','cities.fk_province_id')
+                                ->where('province_id',$request->province)->get();
+        }
+        if(!empty($request->city)){
+            $city = city::select('city_name')->where('city_id',$request->city)->first();
+            $schools  = school::select('school_name','sc_br_name','latitude','longitude')
+                                ->join('schoolbranches','schools.school_id','schoolbranches.fk_school_id')
+                                ->join('subareas','subareas.subarea_id','schoolbranches.fk_subarea_id')
+                                ->join('areas','areas.area_id','subareas.fk_area_id')
+                                ->join('cities','cities.city_id','areas.fk_city_id')
+                                // ->join('provinces','provinces.province_id','cities.fk_province_id')
+                                ->where('city_id',$request->city)->get();
+        }
+        if(!empty($request->area)){
+            $area = area::select('area_name')->where('area_id',$request->area)->first();
+            $schools  = school::select('school_name','sc_br_name','latitude','longitude')
+                                ->join('schoolbranches','schools.school_id','schoolbranches.fk_school_id')
+                                ->join('subareas','subareas.subarea_id','schoolbranches.fk_subarea_id')
+                                ->join('areas','areas.area_id','subareas.fk_area_id')
+                                // ->join('cities','cities.city_id','areas.fk_city_id')
+                                // ->join('provinces','provinces.province_id','cities.fk_province_id')
+                                ->where('area_id',$request->area)->get();
+        }
+        if(!empty($request->subarea)){
+            $subarea = subarea::select('subarea_name')->where('subarea_id',$request->subarea)->first();
+            $schools  = school::select('school_name','sc_br_name','latitude','longitude')
+                                ->join('schoolbranches','schools.school_id','schoolbranches.fk_school_id')
+                                ->join('subareas','subareas.subarea_id','schoolbranches.fk_subarea_id')
+                                // ->join('areas','areas.area_id','subareas.fk_area_id')
+                                // ->join('cities','cities.city_id','areas.fk_city_id')
+                                // ->join('provinces','provinces.province_id','cities.fk_province_id')
+                                ->where('subarea_id',$request->subarea)->get();
+        }
+        $data = array([
+            'province' => $province,
+            'city' => $city,
+            'area' => $area,
+            'subarea' => $subarea,
+            'schools' => $schools
+        ]);
+        return $data;
     }
 }

@@ -26,10 +26,11 @@ Route::get('/ngo', function () {
 
 
 
-Route::get('/reg-admin', function () {
-    return view('home1');
-})->name('admin')->middleware(['auth']);
+// Route::get('/reg-admin', function () {
+//     return view('home1');
+// })->name('admin')->middleware(['auth']);
 
+ROute::get('/reg-admin','HomeController@getDashboard')->name('admin')->middleware(['auth']);
 Auth::routes();
 // users
 Route::get('/viewusers', 'HomeController@viewuser')->name('viewuser');
@@ -57,15 +58,18 @@ Route::get('/news/add','NewsEventController@addNewsPage')->name('addnews');
 Route::get('/school/view','SchoolController@showAllSchools')->name('showschool');
 Route::get('/school/form','SchoolController@createSchoolsForm')->name('createschoolform');
 Route::post('/school/add','SchoolController@addSchoolInDb')->name('addschoolindb');
-Route::post('/school/addbranch','SchoolController@addSchoolBranchInDb')->name('addschoolbranchindb');
 Route::post('/getschool','SchoolController@getSchools');
+
+// School Branch
+Route::post('/school/addbranch','SchoolbranchController@addSchoolBranchInDb')->name('addschoolbranchindb');
 
 
 // ajax
 Route::post('/cities' , 'LocationController@getCitiesByProvince')->name('getcity');
 Route::post('/areas' , 'LocationController@getAreasByCity')->name('getarea');
 Route::post('/subareas' , 'LocationController@getSubAreasByArea')->name('getsubarea');
-
+Route::post('/schools' , 'SchoolController@getSchoolsBySubarea')->name('getschoolbysubarea');
+Route::post('/getmapdata' , 'LocationController@getMapLocation')->name('getmaplocation');
 
 
 

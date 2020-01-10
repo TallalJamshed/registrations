@@ -5,13 +5,13 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <!-- Brand -->
-      <a class="navbar-brand pt-0" href="#">
+      <a class="navbar-brand pt-0" href="{{route('home')}}">
         <h1 style="color:#5e72e4">Registrations.pk</h1>
-        <img src="{{asset('img/brand/blue.png')}}" class="navbar-brand-img" alt="...">
+        <img src="{{asset('img/RegistrationLogo2.png')}}" class="navbar-brand-img" alt="...">
       </a>
       <!-- User -->
       <ul class="nav align-items-center d-md-none">
-        <li class="nav-item dropdown">
+        {{-- <li class="nav-item dropdown">
           <a class="nav-link nav-link-icon" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="ni ni-bell-55"></i>
           </a>
@@ -21,8 +21,8 @@
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Something else here</a>
           </div>
-        </li>
-        <li class="nav-item dropdown">
+        </li> --}}
+        {{-- <li class="nav-item dropdown">
           <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <div class="media align-items-center">
               <span class="avatar avatar-sm rounded-circle">
@@ -56,7 +56,7 @@
               <span>Logout</span>
             </a>
           </div>
-        </li>
+        </li> --}}
       </ul>
       <!-- Collapse -->
       <div class="collapse navbar-collapse" id="sidenav-collapse-main">
@@ -64,7 +64,7 @@
         <div class="navbar-collapse-header d-md-none">
           <div class="row">
             <div class="col-6 collapse-brand">
-              <a href="./index.html">
+              <a href="{{route('home')}}">
                 <img src="{{asset('img/brand/blue.png')}}">
               </a>
             </div>
@@ -90,7 +90,7 @@
         <!-- Navigation -->
         <ul class="navbar-nav">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-btn @if(\Request::route()->getName() == 'home') active @endif" href="{{route('home')}}"> <i class="fa fa-home text-primary"></i>Home</a>
+            <a class="nav-link dropdown-btn @if(\Request::route()->getName() == 'home') active @endif" href="{{route('admin')}}"> <i class="fa fa-home text-primary"></i>Home</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-btn" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

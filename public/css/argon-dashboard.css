@@ -18456,11 +18456,11 @@ textarea[resize="horizontal"] {
   margin-bottom: 0;
 }
 
-.card .table td,
+/* .card .table td,
 .card .table th {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-}
+} */
 
 p {
   font-size: 1rem;
@@ -20705,8 +20705,12 @@ pre>code.highlight {
   margin-left: 1rem;
 }
 #map {
-  height: 500px;
+  height:70vh;
   border:1px solid black;
 }
-
+.invalid-feedback{
+  background-color:red;
+  display: block;
+  width: 50%;
+}
 /*# sourceMappingURL=dashboard-free.css.map */
