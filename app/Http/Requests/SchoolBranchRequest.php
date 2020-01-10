@@ -14,7 +14,7 @@ class SchoolBranchRequest extends FormRequest
 
     public function rules()
     {
-        $rules = [
+        $rules =  [
             'fk_school_id' => 'required',
             'sc_br_name' => 'required',
             'sc_br_address' => 'required',
@@ -29,12 +29,10 @@ class SchoolBranchRequest extends FormRequest
             'principal_name' => 'required',
             'principal_phone' => 'required',
             'principal_email' => 'required',
-            // 'fk_subarea_id' => 'required',
-            // 'latitude' => 'required',
-            // 'longitude' => 'required',
-            // 'location_string' => 'required',
-
-
+            'fk_subarea_id' => 'required',
+            'latitude' => 'required',
+            'longitude' => 'required',
+            'location_string' => 'required'
         ];
         return $rules;
     }
@@ -56,10 +54,11 @@ class SchoolBranchRequest extends FormRequest
             'principal_name.required' => 'Principal Name is required',
             'principal_phone.required' => 'Principal Phone is required',
             'principal_email.required' => 'Principal Email is required',
-            // 'fk_subarea_id.required' => 'Subarea is required',
-            // 'latitude.required' => 'Latitude is required',
-            // 'longitude.required' => 'Longitude is required',
-            // 'location_string.required' => 'Location String is required',
+            'fk_subarea_id.required' => 'Subarea is required',
+            'latitude.required' => 'Latitude is required',
+            'longitude.required' => 'Longitude is required',
+            'location_string.required' => 'Location String is required',
+            'required' => 'Required',
 
 
         ];

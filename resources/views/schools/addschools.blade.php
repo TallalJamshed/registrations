@@ -40,7 +40,7 @@
 
 {{-- Adding School Branch--}}
 <div class="container-fluid mb-5">
-    <form  method="POST" action="{{route('addschoolbranchindb')}}">
+    <form method="POST" action="{{route('addschoolbranchindb')}}">
         @csrf
         <div class="col-xl-12 order-xl-1 mt-5">
             <div class="card bg-secondary shadow">
@@ -55,7 +55,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    {{ count($errors)}}
+                    {{-- {{ count($errors)}} --}}
                     <h6 class="heading-small text-muted mb-4">School information</h6>
                     <div class="row mt-4">
                         <div class="col-md-6">

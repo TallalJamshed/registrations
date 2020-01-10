@@ -17,6 +17,7 @@ class SchoolbranchController extends Controller
 
     public function addSchoolBranchInDb(SchoolBranchRequest $request)
     {
+        // dd($request->all());
         $sc_branch = new Schoolbranch;
         $sc_branch->fill($request->all());     
         $sc_branch->save();                                                                                                       
