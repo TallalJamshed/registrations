@@ -17,9 +17,9 @@ class NewsEventController extends Controller
         return view('news-events.news');
     }
 
-    public function addNewsPage()
+    public function addNewsPage(Request $request)
     {
-        //
+        dd($request->file());
     }
 
     public function store(Request $request)

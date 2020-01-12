@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap&subset=hebrew,latin-ext,vietnamese');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300i,400,400i,500,500i,700,700i,800i,900,900i&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Varela+Round&display=swap&subset=hebrew,latin-ext,vietnamese");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,300i,400,400i,500,500i,700,700i,800i,900,900i&display=swap");
 /* **
  * ========================================
  * Includes Fonts
  * ========================================
  ** */
-
 
 @font-face {
     font-family: FontAwesome;
@@ -15,38 +14,41 @@
 @font-face {
     font-family: fontawesome-webfont;
     src: url(../fonts/font-awesome/fonts/fontawesome-webfont.ttf);
-	}
-	
+}
 
-
-
-	
 @font-face {
-    	font-family: 'FontAwesome';
-    	src: url('../fonts/font-awesome/fonts/fontawesome-webfont.eot'); /* support Internet explorer  */
-    	src: url('../fonts/font-awesome/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), /* support Internet explorer  */
-         url('../fonts/font-awesome/fonts/fontawesome-webfont.woff') format('woff'), /* support Modern browser  */
-         url('../fonts/font-awesome/fonts/fontawesome-webfont.ttf') format('truetype'), /* support firefox , chrome   */
-         url('../fonts/font-awesome/fonts/fontawesome-webfont.svg') format('svg');/* Svg form   */
-		font-weight: normal; 
-		font-style :normal ; 
-		 }	
-		 
-		 body{
-		 	height:0px;
-		 	font-family: 'Varela Round', sans-serif;
-		 }
+    font-family: "FontAwesome";
+    src: url("../fonts/font-awesome/fonts/fontawesome-webfont.eot"); /* support Internet explorer  */
+    src: url("../fonts/font-awesome/fonts/fontawesome-webfont.eot?#iefix")
+            format("embedded-opentype"),
+        /* support Internet explorer  */
+            url("../fonts/font-awesome/fonts/fontawesome-webfont.woff")
+            format("woff"),
+        /* support Modern browser  */
+            url("../fonts/font-awesome/fonts/fontawesome-webfont.ttf")
+            format("truetype"),
+        /* support firefox , chrome   */
+            url("../fonts/font-awesome/fonts/fontawesome-webfont.svg")
+            format("svg"); /* Svg form   */
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    height: 0px;
+    font-family: "Varela Round", sans-serif;
+}
 
 /*naVbar*/
 
-.navbar-default .navbar-nav  li  a {
+.navbar-default .navbar-nav li a {
     color: #333;
     font-size: 14px;
     font-weight: 600;
-    font-family: 'Varela Round', sans-serif;
+    font-family: "Varela Round", sans-serif;
     text-transform: uppercase;
 }
-.navbar-brand  img {
+.navbar-brand img {
     width: 132px;
 }
 .navbar {
@@ -54,12 +56,11 @@
     margin-bottom: 0px;
 }
 .navbar-default {
-
     border: 0px;
 }
 .navbar-brand {
     padding: 0px 15px;
-    }
+}
 .navbar-right {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -71,13 +72,12 @@
     padding: 10px;
     border-radius: 9px;
 }
-.carousel-caption h1{
-font-size: 50px;
-font-weight: bold;
+.carousel-caption h1 {
+    font-size: 50px;
+    font-weight: bold;
 }
-.carousel-caption .btn-success
-{
-	background-color: #00A859;
+.carousel-caption .btn-success {
+    background-color: #00a859;
     color: #fff;
     border-color: transparent;
     border-radius: 50px;
@@ -88,29 +88,26 @@ font-weight: bold;
 }
 /*ABout comp*/
 
-.our-ceo img{
-	width: 100%;
+.our-ceo img {
+    width: 100%;
 }
-.about-company{
-	padding: 50px 0px;
+.about-company {
+    padding: 50px 0px;
     background-color: #f4f4f4;
 }
-.about-company p
-{
-	line-height: 30px;
-	margin-bottom: 30px;
+.about-company p {
+    line-height: 30px;
+    margin-bottom: 30px;
 }
-.about-company h2
-{
-	color: #00A859;
-	font-size: 32px;
+.about-company h2 {
+    color: #00a859;
+    font-size: 32px;
     font-weight: 700;
     margin-top: 0px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
-.about-company a
-{
-	background-color: #00A859;
+.about-company a {
+    background-color: #00a859;
     color: #fff;
     border-color: transparent;
     border-radius: 50px;
@@ -121,39 +118,39 @@ font-weight: bold;
 
 /*Gallery*/
 
-.about-Gallery{
+.about-Gallery {
     padding-top: 30px;
     padding-bottom: 30px;
     /*background-color: #f4f4f4;*/
 }
-.private-institution h5{
-        font-size: 26px;
-        line-height: 36px;
-        font-weight: 600;
-        margin-top: 10px;
-        margin-bottom: 20px;
-        padding-left: 14px;
+.private-institution h5 {
+    font-size: 26px;
+    line-height: 36px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 14px;
 }
-.about-Gallery h3{
+.about-Gallery h3 {
     text-align: center;
     text-transform: capitalize;
     font-size: 35px;
     font-weight: 900;
     margin-bottom: 35px;
-    color: #00A859;
-    font-family: 'Montserrat', sans-serif;
+    color: #00a859;
+    font-family: "Montserrat", sans-serif;
 }
-.Smarter h3{
+.Smarter h3 {
     text-align: justify;
     text-transform: capitalize;
     font-size: 45px;
     font-weight: 900;
     margin-bottom: 35px;
     color: #000;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 .Smarter a {
-    background-color: #00A859;
+    background-color: #00a859;
     color: #fff;
     border-color: transparent;
     border-radius: 50px;
@@ -161,70 +158,75 @@ font-weight: bold;
     width: 150px;
     text-align: center;
 }
-.Smarter h3 span{
-    font-family: 'Varela Round', sans-serif;
+.Smarter h3 span {
+    font-family: "Varela Round", sans-serif;
     font-size: 40px;
-    color: #00A859;
+    color: #00a859;
     font-weight: 500;
 }
-.about-Gallery img{
+.about-Gallery img {
     width: 70%;
     display: block;
     margin: auto;
 }
-.graduation-cap i{
-font-size: 30px;
-text-align: center;
-/* margin: auto; */
-display: block;
+.graduation-cap i {
+    font-size: 30px;
+    text-align: center;
+    /* margin: auto; */
+    display: block;
 }
-.about-Gallery h4{
+.about-Gallery h4 {
     text-align: center;
     color: #000;
     padding-top: 10px;
     font-size: 14px;
     text-transform: capitalize;
 }
-.Companies-reg{
-    border-right: 1px solid #F3F3F3;
+.Companies-reg {
+    border-right: 1px solid #f3f3f3;
     min-height: 100px;
 }
-.about-Gallery .registration:hover
-{
-   -ms-transform: scale(1.5); /* IE 9 */
-  -webkit-transform: scale(1.5); /* Safari 3-8 */
-  transform: scale(1.1);
+.about-Gallery .registration:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.1);
 }
-.panel-body ul{
+.panel-body ul {
     list-style: none;
     padding-left: 0px;
 }
 
 /*News*/
-.news h3{
+.news h3 {
     text-align: center;
     text-transform: capitalize;
     font-size: 35px;
     font-weight: 900;
     margin-bottom: 35px;
-    color: #00A859;
-    font-family: 'Montserrat', sans-serif;
+    color: #00a859;
+    font-family: "Montserrat", sans-serif;
 }
-.news{
+.news {
     padding-top: 40px;
     background-color: #f4f4f4;
+    /* max-height: 500px; */
 }
-.news-latest{
+
+.news-latest {
     padding-left: 15px;
     font-size: 18px;
     text-transform: capitalize;
 }
-.news-running{
+.news-running {
     padding: 10px 0px 0px 10px;
+}
+.news-item {
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 /*Testimonial*/
-.testimonial-main{
+.testimonial-main {
     width: 100%;
     height: 505px;
     background: url(../images/course-bg2.jpg);
@@ -232,10 +234,10 @@ display: block;
     background-size: cover;
     background-position: center;
 }
-.testimonial-section2{
-  /*height: 600px;*/
-  position: relative;
-  padding: 50px 0;
+.testimonial-section2 {
+    /*height: 600px;*/
+    position: relative;
+    padding: 50px 0;
 }
 
 .testim .wrap {
@@ -249,7 +251,7 @@ display: block;
 .testim .arrow {
     display: block;
     position: absolute;
-    color: #00A859;
+    color: #00a859;
     cursor: pointer;
     font-size: 2em;
     top: 50%;
@@ -258,11 +260,11 @@ display: block;
     -moz-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
-    -webkit-transition: all .3s ease-in-out;    
-    -ms-transition: all .3s ease-in-out;    
-    -moz-transition: all .3s ease-in-out;    
-    -o-transition: all .3s ease-in-out;    
-    transition: all .3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     padding: 5px;
     z-index: 22222222;
 }
@@ -274,7 +276,6 @@ display: block;
 .testim .arrow:hover {
     color: #000;
 }
-    
 
 .testim .arrow.left {
     left: 10px;
@@ -304,28 +305,28 @@ display: block;
     border: 1px solid #eee;
     margin: 0 10px;
     cursor: pointer;
-    -webkit-transition: all .5s ease-in-out;    
-    -ms-transition: all .5s ease-in-out;    
-    -moz-transition: all .5s ease-in-out;    
-    -o-transition: all .5s ease-in-out;    
-    transition: all .5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     position: relative;
 }
 
 .testim .dots .dot.active,
 .testim .dots .dot:hover {
-    background: #00A859;
-    border-color: #00A859;
+    background: #00a859;
+    border-color: #00a859;
 }
 
 .testim .dots .dot.active {
-    -webkit-animation: testim-scale .5s ease-in-out forwards;   
-    -moz-animation: testim-scale .5s ease-in-out forwards;   
-    -ms-animation: testim-scale .5s ease-in-out forwards;   
-    -o-animation: testim-scale .5s ease-in-out forwards;   
-    animation: testim-scale .5s ease-in-out forwards;   
+    -webkit-animation: testim-scale 0.5s ease-in-out forwards;
+    -moz-animation: testim-scale 0.5s ease-in-out forwards;
+    -ms-animation: testim-scale 0.5s ease-in-out forwards;
+    -o-animation: testim-scale 0.5s ease-in-out forwards;
+    animation: testim-scale 0.5s ease-in-out forwards;
 }
-    
+
 .testim .cont {
     position: relative;
     overflow: hidden;
@@ -343,13 +344,11 @@ display: block;
 .testim .cont > div.inactive {
     opacity: 1;
 }
-    
 
 .testim .cont > div.active {
     position: relative;
     opacity: 1;
 }
-    
 
 .testim .cont div .img img {
     display: block;
@@ -360,7 +359,7 @@ display: block;
 }
 
 .testim .cont div .h4 {
-    color: #00A859;
+    color: #00a859;
     font-size: 1.2em;
     margin: 15px 0;
 }
@@ -373,51 +372,51 @@ display: block;
 }
 
 .testim .cont div.active .img img {
-    -webkit-animation: testim-show .5s ease-in-out forwards;            
-    -moz-animation: testim-show .5s ease-in-out forwards;            
-    -ms-animation: testim-show .5s ease-in-out forwards;            
-    -o-animation: testim-show .5s ease-in-out forwards;            
-    animation: testim-show .5s ease-in-out forwards;            
+    -webkit-animation: testim-show 0.5s ease-in-out forwards;
+    -moz-animation: testim-show 0.5s ease-in-out forwards;
+    -ms-animation: testim-show 0.5s ease-in-out forwards;
+    -o-animation: testim-show 0.5s ease-in-out forwards;
+    animation: testim-show 0.5s ease-in-out forwards;
 }
 
 .testim .cont div.active .h4 {
-    -webkit-animation: testim-content-in .4s ease-in-out forwards;    
-    -moz-animation: testim-content-in .4s ease-in-out forwards;    
-    -ms-animation: testim-content-in .4s ease-in-out forwards;    
-    -o-animation: testim-content-in .4s ease-in-out forwards;    
-    animation: testim-content-in .4s ease-in-out forwards;    
+    -webkit-animation: testim-content-in 0.4s ease-in-out forwards;
+    -moz-animation: testim-content-in 0.4s ease-in-out forwards;
+    -ms-animation: testim-content-in 0.4s ease-in-out forwards;
+    -o-animation: testim-content-in 0.4s ease-in-out forwards;
+    animation: testim-content-in 0.4s ease-in-out forwards;
 }
 
 .testim .cont div.active p {
-    -webkit-animation: testim-content-in .5s ease-in-out forwards;    
-    -moz-animation: testim-content-in .5s ease-in-out forwards;    
-    -ms-animation: testim-content-in .5s ease-in-out forwards;    
-    -o-animation: testim-content-in .5s ease-in-out forwards;    
-    animation: testim-content-in .5s ease-in-out forwards;    
+    -webkit-animation: testim-content-in 0.5s ease-in-out forwards;
+    -moz-animation: testim-content-in 0.5s ease-in-out forwards;
+    -ms-animation: testim-content-in 0.5s ease-in-out forwards;
+    -o-animation: testim-content-in 0.5s ease-in-out forwards;
+    animation: testim-content-in 0.5s ease-in-out forwards;
 }
 
 .testim .cont div.inactive .img img {
-    -webkit-animation: testim-hide .5s ease-in-out forwards;            
-    -moz-animation: testim-hide .5s ease-in-out forwards;            
-    -ms-animation: testim-hide .5s ease-in-out forwards;            
-    -o-animation: testim-hide .5s ease-in-out forwards;            
-    animation: testim-hide .5s ease-in-out forwards;            
+    -webkit-animation: testim-hide 0.5s ease-in-out forwards;
+    -moz-animation: testim-hide 0.5s ease-in-out forwards;
+    -ms-animation: testim-hide 0.5s ease-in-out forwards;
+    -o-animation: testim-hide 0.5s ease-in-out forwards;
+    animation: testim-hide 0.5s ease-in-out forwards;
 }
 
 .testim .cont div.inactive .h4 {
-    -webkit-animation: testim-content-out .4s ease-in-out forwards;        
-    -moz-animation: testim-content-out .4s ease-in-out forwards;        
-    -ms-animation: testim-content-out .4s ease-in-out forwards;        
-    -o-animation: testim-content-out .4s ease-in-out forwards;        
-    animation: testim-content-out .4s ease-in-out forwards;        
+    -webkit-animation: testim-content-out 0.4s ease-in-out forwards;
+    -moz-animation: testim-content-out 0.4s ease-in-out forwards;
+    -ms-animation: testim-content-out 0.4s ease-in-out forwards;
+    -o-animation: testim-content-out 0.4s ease-in-out forwards;
+    animation: testim-content-out 0.4s ease-in-out forwards;
 }
 
 .testim .cont div.inactive p {
-    -webkit-animation: testim-content-out .5s ease-in-out forwards;    
-    -moz-animation: testim-content-out .5s ease-in-out forwards;    
-    -ms-animation: testim-content-out .5s ease-in-out forwards;    
-    -o-animation: testim-content-out .5s ease-in-out forwards;    
-    animation: testim-content-out .5s ease-in-out forwards;    
+    -webkit-animation: testim-content-out 0.5s ease-in-out forwards;
+    -moz-animation: testim-content-out 0.5s ease-in-out forwards;
+    -ms-animation: testim-content-out 0.5s ease-in-out forwards;
+    -o-animation: testim-content-out 0.5s ease-in-out forwards;
+    animation: testim-content-out 0.5s ease-in-out forwards;
 }
 
 @-webkit-keyframes testim-scale {
@@ -427,18 +426,18 @@ display: block;
     }
 
     35% {
-        -webkit-box-shadow: 0px 0px 10px 5px #eee;        
-        box-shadow: 0px 0px 10px 5px #eee;        
+        -webkit-box-shadow: 0px 0px 10px 5px #eee;
+        box-shadow: 0px 0px 10px 5px #eee;
     }
 
     70% {
-        -webkit-box-shadow: 0px 0px 10px 5px #ea830e;        
-        box-shadow: 0px 0px 10px 5px #ea830e;        
+        -webkit-box-shadow: 0px 0px 10px 5px #ea830e;
+        box-shadow: 0px 0px 10px 5px #ea830e;
     }
 
     100% {
-        -webkit-box-shadow: 0px 0px 0px 0px #ea830e;        
-        box-shadow: 0px 0px 0px 0px #ea830e;        
+        -webkit-box-shadow: 0px 0px 0px 0px #ea830e;
+        box-shadow: 0px 0px 0px 0px #ea830e;
     }
 }
 
@@ -449,18 +448,18 @@ display: block;
     }
 
     35% {
-        -moz-box-shadow: 0px 0px 10px 5px #eee;        
-        box-shadow: 0px 0px 10px 5px #eee;        
+        -moz-box-shadow: 0px 0px 10px 5px #eee;
+        box-shadow: 0px 0px 10px 5px #eee;
     }
 
     70% {
-        -moz-box-shadow: 0px 0px 10px 5px #ea830e;        
-        box-shadow: 0px 0px 10px 5px #ea830e;        
+        -moz-box-shadow: 0px 0px 10px 5px #ea830e;
+        box-shadow: 0px 0px 10px 5px #ea830e;
     }
 
     100% {
-        -moz-box-shadow: 0px 0px 0px 0px #ea830e;        
-        box-shadow: 0px 0px 0px 0px #ea830e;        
+        -moz-box-shadow: 0px 0px 0px 0px #ea830e;
+        box-shadow: 0px 0px 0px 0px #ea830e;
     }
 }
 
@@ -471,18 +470,18 @@ display: block;
     }
 
     35% {
-        -ms-box-shadow: 0px 0px 10px 5px #eee;        
-        box-shadow: 0px 0px 10px 5px #eee;        
+        -ms-box-shadow: 0px 0px 10px 5px #eee;
+        box-shadow: 0px 0px 10px 5px #eee;
     }
 
     70% {
-        -ms-box-shadow: 0px 0px 10px 5px #ea830e;        
-        box-shadow: 0px 0px 10px 5px #ea830e;        
+        -ms-box-shadow: 0px 0px 10px 5px #ea830e;
+        box-shadow: 0px 0px 10px 5px #ea830e;
     }
 
     100% {
-        -ms-box-shadow: 0px 0px 0px 0px #ea830e;        
-        box-shadow: 0px 0px 0px 0px #ea830e;        
+        -ms-box-shadow: 0px 0px 0px 0px #ea830e;
+        box-shadow: 0px 0px 0px 0px #ea830e;
     }
 }
 
@@ -493,18 +492,18 @@ display: block;
     }
 
     35% {
-        -o-box-shadow: 0px 0px 10px 5px #eee;        
-        box-shadow: 0px 0px 10px 5px #eee;        
+        -o-box-shadow: 0px 0px 10px 5px #eee;
+        box-shadow: 0px 0px 10px 5px #eee;
     }
 
     70% {
-        -o-box-shadow: 0px 0px 10px 5px #ea830e;        
-        box-shadow: 0px 0px 10px 5px #ea830e;        
+        -o-box-shadow: 0px 0px 10px 5px #ea830e;
+        box-shadow: 0px 0px 10px 5px #ea830e;
     }
 
     100% {
-        -o-box-shadow: 0px 0px 0px 0px #ea830e;        
-        box-shadow: 0px 0px 0px 0px #ea830e;        
+        -o-box-shadow: 0px 0px 0px 0px #ea830e;
+        box-shadow: 0px 0px 0px 0px #ea830e;
     }
 }
 
@@ -514,15 +513,15 @@ display: block;
     }
 
     35% {
-        box-shadow: 0px 0px 10px 5px #eee;        
+        box-shadow: 0px 0px 10px 5px #eee;
     }
 
     70% {
-        box-shadow: 0px 0px 10px 5px #ea830e;        
+        box-shadow: 0px 0px 10px 5px #ea830e;
     }
 
     100% {
-        box-shadow: 0px 0px 0px 0px #ea830e;        
+        box-shadow: 0px 0px 0px 0px #ea830e;
     }
 }
 
@@ -532,11 +531,11 @@ display: block;
         -webkit-transform: translateY(100%);
         transform: translateY(100%);
     }
-    
+
     to {
         opacity: 1;
-        -webkit-transform: translateY(0);        
-        transform: translateY(0);        
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
     }
 }
 
@@ -546,11 +545,11 @@ display: block;
         -moz-transform: translateY(100%);
         transform: translateY(100%);
     }
-    
+
     to {
         opacity: 1;
-        -moz-transform: translateY(0);        
-        transform: translateY(0);        
+        -moz-transform: translateY(0);
+        transform: translateY(0);
     }
 }
 
@@ -560,11 +559,11 @@ display: block;
         -ms-transform: translateY(100%);
         transform: translateY(100%);
     }
-    
+
     to {
         opacity: 1;
-        -ms-transform: translateY(0);        
-        transform: translateY(0);        
+        -ms-transform: translateY(0);
+        transform: translateY(0);
     }
 }
 
@@ -574,11 +573,11 @@ display: block;
         -o-transform: translateY(100%);
         transform: translateY(100%);
     }
-    
+
     to {
         opacity: 1;
-        -o-transform: translateY(0);        
-        transform: translateY(0);        
+        -o-transform: translateY(0);
+        transform: translateY(0);
     }
 }
 
@@ -587,10 +586,10 @@ display: block;
         opacity: 0;
         transform: translateY(100%);
     }
-    
+
     to {
         opacity: 1;
-        transform: translateY(0);        
+        transform: translateY(0);
     }
 }
 
@@ -600,11 +599,11 @@ display: block;
         -webkit-transform: translateY(0);
         transform: translateY(0);
     }
-    
+
     to {
         opacity: 0;
-        -webkit-transform: translateY(-100%);        
-        transform: translateY(-100%);        
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
     }
 }
 
@@ -614,11 +613,11 @@ display: block;
         -moz-transform: translateY(0);
         transform: translateY(0);
     }
-    
+
     to {
         opacity: 0;
-        -moz-transform: translateY(-100%);        
-        transform: translateY(-100%);        
+        -moz-transform: translateY(-100%);
+        transform: translateY(-100%);
     }
 }
 
@@ -628,11 +627,11 @@ display: block;
         -ms-transform: translateY(0);
         transform: translateY(0);
     }
-    
+
     to {
         opacity: 0;
-        -ms-transform: translateY(-100%);        
-        transform: translateY(-100%);        
+        -ms-transform: translateY(-100%);
+        transform: translateY(-100%);
     }
 }
 
@@ -642,11 +641,11 @@ display: block;
         -o-transform: translateY(0);
         transform: translateY(0);
     }
-    
+
     to {
         opacity: 0;
-        transform: translateY(-100%);        
-        transform: translateY(-100%);        
+        transform: translateY(-100%);
+        transform: translateY(-100%);
     }
 }
 
@@ -655,10 +654,10 @@ display: block;
         opacity: 1;
         transform: translateY(0);
     }
-    
+
     to {
         opacity: 0;
-        transform: translateY(-100%);        
+        transform: translateY(-100%);
     }
 }
 
@@ -668,11 +667,11 @@ display: block;
         -webkit-transform: scale(0);
         transform: scale(0);
     }
-    
+
     to {
         opacity: 1;
-        -webkit-transform: scale(1);       
-        transform: scale(1);       
+        -webkit-transform: scale(1);
+        transform: scale(1);
     }
 }
 
@@ -682,11 +681,11 @@ display: block;
         -moz-transform: scale(0);
         transform: scale(0);
     }
-    
+
     to {
         opacity: 1;
-        -moz-transform: scale(1);       
-        transform: scale(1);       
+        -moz-transform: scale(1);
+        transform: scale(1);
     }
 }
 
@@ -696,11 +695,11 @@ display: block;
         -ms-transform: scale(0);
         transform: scale(0);
     }
-    
+
     to {
         opacity: 1;
-        -ms-transform: scale(1);       
-        transform: scale(1);       
+        -ms-transform: scale(1);
+        transform: scale(1);
     }
 }
 
@@ -710,11 +709,11 @@ display: block;
         -o-transform: scale(0);
         transform: scale(0);
     }
-    
+
     to {
         opacity: 1;
-        -o-transform: scale(1);       
-        transform: scale(1);       
+        -o-transform: scale(1);
+        transform: scale(1);
     }
 }
 
@@ -723,20 +722,20 @@ display: block;
         opacity: 0;
         transform: scale(0);
     }
-    
+
     to {
         opacity: 1;
-        transform: scale(1);       
+        transform: scale(1);
     }
 }
 
 @-webkit-keyframes testim-hide {
     from {
         opacity: 1;
-        -webkit-transform: scale(1);       
-        transform: scale(1);       
+        -webkit-transform: scale(1);
+        transform: scale(1);
     }
-    
+
     to {
         opacity: 0;
         -webkit-transform: scale(0);
@@ -747,10 +746,10 @@ display: block;
 @-moz-keyframes testim-hide {
     from {
         opacity: 1;
-        -moz-transform: scale(1);       
-        transform: scale(1);       
+        -moz-transform: scale(1);
+        transform: scale(1);
     }
-    
+
     to {
         opacity: 0;
         -moz-transform: scale(0);
@@ -761,10 +760,10 @@ display: block;
 @-ms-keyframes testim-hide {
     from {
         opacity: 1;
-        -ms-transform: scale(1);       
-        transform: scale(1);       
+        -ms-transform: scale(1);
+        transform: scale(1);
     }
-    
+
     to {
         opacity: 0;
         -ms-transform: scale(0);
@@ -775,10 +774,10 @@ display: block;
 @-o-keyframes testim-hide {
     from {
         opacity: 1;
-        -o-transform: scale(1);       
-        transform: scale(1);       
+        -o-transform: scale(1);
+        transform: scale(1);
     }
-    
+
     to {
         opacity: 0;
         -o-transform: scale(0);
@@ -789,9 +788,9 @@ display: block;
 @keyframes testim-hide {
     from {
         opacity: 1;
-        transform: scale(1);       
+        transform: scale(1);
     }
-    
+
     to {
         opacity: 0;
         transform: scale(0);
@@ -799,28 +798,27 @@ display: block;
 }
 
 @media all and (max-width: 300px) {
-  body {
-    font-size: 14px;
-  }
+    body {
+        font-size: 14px;
+    }
 }
 
 @media all and (max-width: 500px) {
-  .testim .arrow {
-    font-size: 1.5em;
-  }
-  
-  .testim .cont div p {
-    line-height: 25px;
-  }
+    .testim .arrow {
+        font-size: 1.5em;
+    }
 
+    .testim .cont div p {
+        line-height: 25px;
+    }
 }
-.h2{
+.h2 {
     font-size: 30px;
     font-weight: 600;
     color: #fff;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
-.bag-animation{
+.bag-animation {
     width: 100%;
     background: rgba(55, 59, 67, 0.7);
     height: 100%;
@@ -835,15 +833,15 @@ display: block;
     text-transform: uppercase;
 }
 #footer {
-    background: #f4f4f4!important;
+    background: #f4f4f4 !important;
     padding-top: 40px;
     padding-bottom: 30px;
 }
-#footer h5{
+#footer h5 {
     padding-left: 10px;
     padding-bottom: 6px;
     margin-bottom: 20px;
-    color:#000;
+    color: #000;
     font-weight: 700;
     font-size: 20px;
 }
@@ -853,88 +851,85 @@ display: block;
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
 }
-#footer ul.social li{
+#footer ul.social li {
     padding: 3px 0;
 }
 #footer ul.social li a i {
     margin-right: 5px;
-    font-size:25px;
-    -webkit-transition: .5s all ease;
-    -moz-transition: .5s all ease;
-    transition: .5s all ease;
+    font-size: 25px;
+    -webkit-transition: 0.5s all ease;
+    -moz-transition: 0.5s all ease;
+    transition: 0.5s all ease;
 }
 #footer ul.social li:hover a i {
-    font-size:30px;
-    margin-top:-10px;
+    font-size: 30px;
+    margin-top: -10px;
 }
 #footer ul.social li a,
-#footer ul.quick-links li a{
-    color:#000;
+#footer ul.quick-links li a {
+    color: #000;
 }
-.social li a{
-    color:#00A859 !important;
+.social li a {
+    color: #00a859 !important;
 }
-#footer ul.social li a:hover{
-    color:#eeeeee;
+#footer ul.social li a:hover {
+    color: #eeeeee;
 }
-#footer ul.quick-links li{
+#footer ul.quick-links li {
     padding: 3px 0;
-    -webkit-transition: .5s all ease;
-    -moz-transition: .5s all ease;
-    transition: .5s all ease;
+    -webkit-transition: 0.5s all ease;
+    -moz-transition: 0.5s all ease;
+    transition: 0.5s all ease;
 }
-#footer ul.quick-links li:hover{
+#footer ul.quick-links li:hover {
     padding: 3px 0;
-    margin-left:5px;
-    font-weight:700;
+    margin-left: 5px;
+    font-weight: 700;
 }
-#footer ul.quick-links li a i{
+#footer ul.quick-links li a i {
     margin-right: 5px;
 }
 #footer ul.quick-links li:hover a i {
     font-weight: 700;
 }
 
-@media (max-width:767px){
+@media (max-width: 767px) {
     #footer h5 {
-    padding-left: 0;
-    border-left: transparent;
-    padding-bottom: 0px;
-    margin-bottom: 10px;
-}
+        padding-left: 0;
+        border-left: transparent;
+        padding-bottom: 0px;
+        margin-bottom: 10px;
+    }
 }
 
 /*SERVICES*/
-.about-services i{
-font-size: 65px;
-text-align: center;
-margin: auto;
-display: block;
-margin-top: 0px;
-margin-bottom: 25px;
+.about-services i {
+    font-size: 65px;
+    text-align: center;
+    margin: auto;
+    display: block;
+    margin-top: 0px;
+    margin-bottom: 25px;
 }
-.about-services h2
-{
-    color: #00A859;
+.about-services h2 {
+    color: #00a859;
     font-size: 32px;
     font-weight: 700;
     margin-top: 0px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
-.about-services p
-{
+.about-services p {
     line-height: 30px;
     margin-bottom: 30px;
 }
-.education-ser{
+.education-ser {
     padding-top: 40px;
-
 }
 .overlay {
     background-color: rgba(0, 0, 0, 0.7);
-        height: 100%;
+    height: 100%;
 }
-.overlay2{
+.overlay2 {
     width: 100%;
     height: 200px;
     background: url(../images/course-bg2.jpg);
@@ -942,506 +937,475 @@ margin-bottom: 25px;
     background-size: cover;
     background-position: center;
 }
-.Responsive-Services{
+.Responsive-Services {
     margin-top: 40px;
     color: #fff;
     margin-bottom: 40px;
 }
-.Responsive-Services h2
-{
-    font-family: 'Montserrat', sans-serif;
+.Responsive-Services h2 {
+    font-family: "Montserrat", sans-serif;
     font-size: 42px;
     line-height: 52px;
     font-weight: 600;
     margin-bottom: 12px;
     margin-top: 0;
 }
-.Responsive-Services span
-{
+.Responsive-Services span {
     font-size: 20px;
     line-height: 30px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
-.grad-cap{
+.grad-cap {
     float: left;
     width: 20%;
 }
-.Education-site{
-   float: left;
-    width: 80%; 
+.Education-site {
+    float: left;
+    width: 80%;
 }
-.education-services-two{
+.education-services-two {
     padding-top: 20px;
 }
 
 /*About*/
 
-.About-content{
+.About-content {
     padding-top: 80px;
 }
-.concept{
+.concept {
     padding-top: 30px;
 }
-.About-page{
+.About-page {
     padding-top: 30px;
 }
-.About-page img
-{
--webkit-box-shadow: -1px 2px 12px 1px rgba(0,0,0,0.75);
--moz-box-shadow: -1px 2px 12px 1px rgba(0,0,0,0.75);
-box-shadow: -1px 2px 12px 1px rgba(0,0,0,0.75);
+.About-page img {
+    -webkit-box-shadow: -1px 2px 12px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 2px 12px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 2px 12px 1px rgba(0, 0, 0, 0.75);
     width: 78%;
     display: block;
     margin: auto;
 }
-.contact-form7 #contact-form .form-control{
+.contact-form7 #contact-form .form-control {
     border-radius: 24px !important;
     height: 42px;
 }
-.contact-form7 #contact-form label{
+.contact-form7 #contact-form label {
     margin-bottom: 10px;
 }
-.contact-form7 #contact-form .md-form{
+.contact-form7 #contact-form .md-form {
     margin-top: 10px;
 }
-.contact-form7 #contact-form textarea{
+.contact-form7 #contact-form textarea {
     height: 120px !important;
 }
-.center-on-small-only{
+.center-on-small-only {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.contact-icons span
-{
+.contact-icons span {
     padding-left: 10px;
     margin-top: 0px;
     position: absolute;
 }
-.contact-icons 
-{
+.contact-icons {
     list-style: none;
     padding-top: 30px;
 }
-.contact-icons  li
-{
+.contact-icons li {
     line-height: 64px;
 }
-.contact-icons i
-{
-    color: #00A859;
+.contact-icons i {
+    color: #00a859;
 }
-.pt-4{
-color: #00A859
+.pt-4 {
+    color: #00a859;
 }
-.btn-primary
-{
-    background-color: #00A859;
+.btn-primary {
+    background-color: #00a859;
     border: 0px;
 }
-.sec-body{
+.sec-body {
     padding-top: 30px;
 }
-.school-reg{
+.school-reg {
     padding-top: 20px;
 }
 .dropdown-menu li a {
     text-transform: capitalize !important;
 }
 
-@media screen and (max-width: 1200px) and (min-width: 992px)
-{
-.carousel-caption {
-    bottom: 30%;
-}
-}
-
-@media screen and (max-width: 991px) and (min-width: 768px)
-{
-.carousel-caption {
-    bottom: 30%;
-}
-.navbar-brand {
-   
-    padding: 6px 6px;
-}
-.nav  li  a {
-    padding: 10px 10px;
-}
-.carousel-caption {
-    bottom: 5%;
-}
-.our-ceo img {
-    width: 56%;
-    margin: auto;
-    display: block;
-}
-.about-company h2 {
-
-    margin-top: 20px;
-    text-align: center;
-}
-.about-company p {
-    
-    text-align: center;
-}
-.about-company a {
-    display: block;
-    margin: auto;
-}
-.Smarter h3 {
-    text-align: center;
-}
-.Smarter a {
-    
-    width: 155px;
-    text-align: center;
-    display: block;
-    margin: auto;
-}
-.Companies-reg {
-    padding-top: 25px;
-}
-.graduation-cap i {
-    font-size: 40px;
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+    .carousel-caption {
+        bottom: 30%;
     }
-.about-Gallery h4 {
-    font-size: 16px; 
 }
-.private-institution h5 {
-    text-align: center;
-}
-.private-institution p{
-    text-align: center;
-}
-.About-page img {
-    width: 58%;
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+    .carousel-caption {
+        bottom: 30%;
     }
-.About-content {
-    padding-top: 40px;
-    text-align: center;
+    .navbar-brand {
+        padding: 6px 6px;
+    }
+    .nav li a {
+        padding: 10px 10px;
+    }
+    .carousel-caption {
+        bottom: 5%;
+    }
+    .our-ceo img {
+        width: 56%;
+        margin: auto;
+        display: block;
+    }
+    .about-company h2 {
+        margin-top: 20px;
+        text-align: center;
+    }
+    .about-company p {
+        text-align: center;
+    }
+    .about-company a {
+        display: block;
+        margin: auto;
+    }
+    .Smarter h3 {
+        text-align: center;
+    }
+    .Smarter a {
+        width: 155px;
+        text-align: center;
+        display: block;
+        margin: auto;
+    }
+    .Companies-reg {
+        padding-top: 25px;
+    }
+    .graduation-cap i {
+        font-size: 40px;
+    }
+    .about-Gallery h4 {
+        font-size: 16px;
+    }
+    .private-institution h5 {
+        text-align: center;
+    }
+    .private-institution p {
+        text-align: center;
+    }
+    .About-page img {
+        width: 58%;
+    }
+    .About-content {
+        padding-top: 40px;
+        text-align: center;
+    }
+    .about-services p {
+        margin-bottom: 0px;
+        text-align: center;
+    }
+    .concept {
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+    .grad-cap {
+        float: none;
+        width: 100%;
+    }
+    .Education-site {
+        float: none;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+    .center-on-small-only {
+        display: block;
+        margin: auto;
+        text-align: center;
+        padding-top: 30px;
+    }
+    .contact-icons span {
+        position: relative;
+    }
+    .contact-icons {
+        padding-left: 0px;
+        text-align: center;
+    }
 }
-.about-services p {
-    
-    margin-bottom: 0px;
-    text-align: center;
-}
-.concept {
-    padding-top: 20px;
-    padding-bottom: 30px;
-}
-.grad-cap {
-    float: none;
-    width: 100%;
-}
-.Education-site {
-    float: none;
-    width: 100%;
-    text-align: center;
-    padding-bottom: 30px;
-}
-.center-on-small-only {
-    display: block;
-    margin: auto;
-    text-align: center;
-    padding-top: 30px;
-}
-.contact-icons span {
-    position: relative; 
-}
-.contact-icons {
-    padding-left: 0px;
-    text-align: center;
-}
-}
-
-
-
 
 /*Mobile*/
 
-@media screen and (max-width: 767px) and (min-width: 640px)
-{
-.carousel-caption {
-    bottom: 30%;
-}
-.navbar-brand {
-   
-    padding: 6px 6px;
-}
-.nav  li  a {
-    padding: 10px 10px;
-}
-.carousel-caption {
-    bottom: 5%;
-}
-.our-ceo img {
-    width: 56%;
-    margin: auto;
-    display: block;
-}
-.about-company h2 {
-
-    margin-top: 20px;
-    text-align: center;
-}
-.about-company p {
-    
-    text-align: center;
-}
-.about-company a {
-    display: block;
-    margin: auto;
-}
-.Smarter h3 {
-    text-align: center;
-}
-.Smarter a {
-    
-    width: 155px;
-    text-align: center;
-    display: block;
-    margin: auto;
-}
-.Companies-reg {
-    padding-top: 25px;
-}
-.graduation-cap i {
-    font-size: 40px;
+@media screen and (max-width: 767px) and (min-width: 640px) {
+    .carousel-caption {
+        bottom: 30%;
     }
-.about-Gallery h4 {
-    font-size: 16px; 
-}
-.private-institution h5 {
-    text-align: center;
-}
-.private-institution p{
-    text-align: center;
-}
-.About-page img {
-    width: 58%;
+    .navbar-brand {
+        padding: 6px 6px;
     }
-.About-content {
-    padding-top: 40px;
-    text-align: center;
+    .nav li a {
+        padding: 10px 10px;
+    }
+    .carousel-caption {
+        bottom: 5%;
+    }
+    .our-ceo img {
+        width: 56%;
+        margin: auto;
+        display: block;
+    }
+    .about-company h2 {
+        margin-top: 20px;
+        text-align: center;
+    }
+    .about-company p {
+        text-align: center;
+    }
+    .about-company a {
+        display: block;
+        margin: auto;
+    }
+    .Smarter h3 {
+        text-align: center;
+    }
+    .Smarter a {
+        width: 155px;
+        text-align: center;
+        display: block;
+        margin: auto;
+    }
+    .Companies-reg {
+        padding-top: 25px;
+    }
+    .graduation-cap i {
+        font-size: 40px;
+    }
+    .about-Gallery h4 {
+        font-size: 16px;
+    }
+    .private-institution h5 {
+        text-align: center;
+    }
+    .private-institution p {
+        text-align: center;
+    }
+    .About-page img {
+        width: 58%;
+    }
+    .About-content {
+        padding-top: 40px;
+        text-align: center;
+    }
+    .about-services p {
+        margin-bottom: 0px;
+        text-align: center;
+    }
+    .concept {
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+    .grad-cap {
+        float: none;
+        width: 100%;
+    }
+    .Education-site {
+        float: none;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+    .center-on-small-only {
+        display: block;
+        margin: auto;
+        text-align: center;
+        padding-top: 30px;
+    }
+    .contact-icons span {
+        position: relative;
+    }
+    .contact-icons {
+        padding-left: 0px;
+        text-align: center;
+    }
+    /*Mobile*/
+    .carousel-control {
+        width: 9%;
+    }
+    .navbar-default .navbar-collapse {
+        border: 0px;
+    }
+    .navbar {
+        min-height: 80px;
+    }
+    .center-on-small-only {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .btn-primary {
+        width: 100px;
+    }
 }
-.about-services p {
-    
-    margin-bottom: 0px;
-    text-align: center;
-}
-.concept {
-    padding-top: 20px;
-    padding-bottom: 30px;
-}
-.grad-cap {
-    float: none;
-    width: 100%;
-}
-.Education-site {
-    float: none;
-    width: 100%;
-    text-align: center;
-    padding-bottom: 30px;
-}
-.center-on-small-only {
-    display: block;
-    margin: auto;
-    text-align: center;
-    padding-top: 30px;
-}
-.contact-icons span {
-    position: relative; 
-}
-.contact-icons {
-    padding-left: 0px;
-    text-align: center;
-}
-/*Mobile*/
-.carousel-control { 
-    width: 9%;
-}
-.navbar-default .navbar-collapse{
-    border: 0px;
-}
-.navbar {   
-    min-height: 80px;
-}
-.center-on-small-only {
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-.btn-primary {
-    width: 100px;
-}
-}
-
 
 /*Small Mob*/
 
-@media screen and (max-width: 639px) and (min-width: 1px)
-{
-.carousel-caption {
-    bottom: 30%;
-}
-.navbar-brand {
-   
-    padding: 6px 6px;
-}
-.nav  li  a {
-    padding: 10px 10px;
-}
-.carousel-caption {
-    bottom: 5%;
-}
-.our-ceo img {
-    width: 56%;
-    margin: auto;
-    display: block;
-}
-.about-company h2 {
-
-    margin-top: 20px;
-    text-align: center;
-}
-.about-company p {
-    
-    text-align: center;
-}
-.about-company a {
-    display: block;
-    margin: auto;
-}
-.Smarter h3 {
-    text-align: center;
-}
-.Smarter a {
-    
-    width: 155px;
-    text-align: center;
-    display: block;
-    margin: auto;
-}
-.Companies-reg {
-    padding-top: 25px;
-}
-.graduation-cap i {
-    font-size: 40px;
+@media screen and (max-width: 639px) and (min-width: 1px) {
+    .carousel-caption {
+        bottom: 30%;
     }
-.about-Gallery h4 {
-    font-size: 16px; 
-}
-.private-institution h5 {
-    text-align: center;
-}
-.private-institution p{
-    text-align: center;
-}
-.About-page img {
-    width: 58%;
+    .navbar-brand {
+        padding: 6px 6px;
     }
-.About-content {
-    padding-top: 40px;
-    text-align: center;
-}
-.about-services p {
-    
-    margin-bottom: 0px;
-    text-align: center;
-}
-.concept {
-    padding-top: 20px;
-    padding-bottom: 30px;
-}
-.grad-cap {
-    float: none;
-    width: 100%;
-}
-.Education-site {
-    float: none;
-    width: 100%;
-    text-align: center;
-    padding-bottom: 30px;
-}
-.center-on-small-only {
-    display: block;
-    margin: auto;
-    text-align: center;
-    padding-top: 30px;
-}
-.contact-icons span {
-    position: relative; 
-}
-.contact-icons {
-    padding-left: 0px;
-    text-align: center;
-}
-/*Mobile*/
-.carousel-control { 
-    width: 9%;
-}
-.navbar-default .navbar-collapse{
-    border: 0px;
-}
-.navbar {   
-    min-height: 80px;
-}
-.center-on-small-only {
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-.btn-primary {
-    width: 100px;
-}
-/*Small mob*/
-.pt-4 {
-    font-size: 24px;
-}
-.news h3 {
-    font-size: 28px;
+    .nav li a {
+        padding: 10px 10px;
     }
-.private-institution h5 {
-    font-size: 20px;
-}
-.Smarter h3 span {
-    font-size: 30px;
-}
-.carousel-caption {
-    display: none;
-}
-.Smarter a {
-    width: 135px;
-    padding: 9px 9px;
-}
-.about-company a {
-    width: 135px;
-    padding: 9px 9px;
+    .carousel-caption {
+        bottom: 5%;
     }
-.about-Gallery h3 {
-    margin-top: 0px;
-}
-.about-Gallery h3 {
-    margin-bottom: 20px;
-}
-.testim .dots {
-    padding-left: 0px;
-}
-.testim .cont div p {
-    line-height: 22px;
-    font-size: 14px;
-}
-.Responsive-Services span {
-    font-size: 16px;
+    .our-ceo img {
+        width: 56%;
+        margin: auto;
+        display: block;
     }
-.Responsive-Services h2 {
-    font-size: 32px;
-}
-.About-page img {
-    width: 70%;
-}
-.btn-primary {
-    width: auto;
-}
-.navbar-brand img {
-    width: 100px;
-}
+    .about-company h2 {
+        margin-top: 20px;
+        text-align: center;
+    }
+    .about-company p {
+        text-align: center;
+    }
+    .about-company a {
+        display: block;
+        margin: auto;
+    }
+    .Smarter h3 {
+        text-align: center;
+    }
+    .Smarter a {
+        width: 155px;
+        text-align: center;
+        display: block;
+        margin: auto;
+    }
+    .Companies-reg {
+        padding-top: 25px;
+    }
+    .graduation-cap i {
+        font-size: 40px;
+    }
+    .about-Gallery h4 {
+        font-size: 16px;
+    }
+    .private-institution h5 {
+        text-align: center;
+    }
+    .private-institution p {
+        text-align: center;
+    }
+    .About-page img {
+        width: 58%;
+    }
+    .About-content {
+        padding-top: 40px;
+        text-align: center;
+    }
+    .about-services p {
+        margin-bottom: 0px;
+        text-align: center;
+    }
+    .concept {
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+    .grad-cap {
+        float: none;
+        width: 100%;
+    }
+    .Education-site {
+        float: none;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+    .center-on-small-only {
+        display: block;
+        margin: auto;
+        text-align: center;
+        padding-top: 30px;
+    }
+    .contact-icons span {
+        position: relative;
+    }
+    .contact-icons {
+        padding-left: 0px;
+        text-align: center;
+    }
+    /*Mobile*/
+    .carousel-control {
+        width: 9%;
+    }
+    .navbar-default .navbar-collapse {
+        border: 0px;
+    }
+    .navbar {
+        min-height: 80px;
+    }
+    .center-on-small-only {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .btn-primary {
+        width: 100px;
+    }
+    /*Small mob*/
+    .pt-4 {
+        font-size: 24px;
+    }
+    .news h3 {
+        font-size: 28px;
+    }
+    .private-institution h5 {
+        font-size: 20px;
+    }
+    .Smarter h3 span {
+        font-size: 30px;
+    }
+    .carousel-caption {
+        display: none;
+    }
+    .Smarter a {
+        width: 135px;
+        padding: 9px 9px;
+    }
+    .about-company a {
+        width: 135px;
+        padding: 9px 9px;
+    }
+    .about-Gallery h3 {
+        margin-top: 0px;
+    }
+    .about-Gallery h3 {
+        margin-bottom: 20px;
+    }
+    .testim .dots {
+        padding-left: 0px;
+    }
+    .testim .cont div p {
+        line-height: 22px;
+        font-size: 14px;
+    }
+    .Responsive-Services span {
+        font-size: 16px;
+    }
+    .Responsive-Services h2 {
+        font-size: 32px;
+    }
+    .About-page img {
+        width: 70%;
+    }
+    .btn-primary {
+        width: auto;
+    }
+    .navbar-brand img {
+        width: 100px;
+    }
 }

@@ -51,7 +51,7 @@ Route::get('/geolocator/view','LocationController@showGeoLocatorPage')->name('sh
 
 //news - events
 Route::get('/news/view','NewsEventController@showNewsPage')->name('shownews');
-Route::get('/news/add','NewsEventController@addNewsPage')->name('addnews');
+Route::post('/news/add','NewsEventController@addNewsPage')->name('addnews');
 
 
 // schools

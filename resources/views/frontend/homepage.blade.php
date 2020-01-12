@@ -175,10 +175,9 @@
                                <table cellpadding="4">
                                   <tr>
                                      <td>
-                                        <img src="{{asset('img/1.png')}}" width="60" class="img-circle" />
+                                        <img src="{{asset('img/burma.jpg')}}" width="60" class="img-circle" />
                                      </td>
-                                     <td class="news-running">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim...
-                                        <br><a href="#">Read more...</a>
+                                     <td class="news-running">Burma Protest</a>
                                      </td>
                                   </tr>
                                </table>
@@ -187,59 +186,40 @@
                                <table cellpadding="4">
                                   <tr>
                                      <td>
-                                        <img src="{{asset('img/2.png')}}" width="60" class="img-circle" />
+                                        <img src="{{asset('img/jawdani.jpg')}}" width="60" class="img-circle" />
                                      </td>
-                                     <td class="news-running">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim... 
-                                        <br><a href="#">Read more...</a>
+                                     <td class="news-running">Jawdani Conference</a>
                                      </td>
                                   </tr>
                                </table>
                             </li>
                             <li class="news-item">
-                               <table cellpadding="4">
-                                  <tr>
-                                     <td><img src="{{asset('img/3.png')}}" width="60" class="img-circle" /></td>
-                                     <td class="news-running">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim... 
-                                     <br><a href="#">Read more...</a></td>
-                                  </tr>
-                               </table>
-                            </li>
-                            <li class="news-item">
-                               <table cellpadding="4">
-                                  <tr>
-                                     <td><img src="{{asset('img/4.png')}}" width="60" class="img-circle" /></td>
-                                     <td class="news-running">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim... 
-                                     <br><a href="#">Read more...</a></td>
-                                  </tr>
-                               </table>
-                            </li>
-                            <li class="news-item">
-                               <table cellpadding="4">
-                                  <tr>
-                                     <td><img src="{{asset('img/5.png')}}" width="60" class="img-circle" /></td>
-                                     <td class="news-running">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim...
-                                     <br><a href="#">Read more...</a></td>
-                                  </tr>
-                               </table>
-                            </li>
-                            <li class="news-item">
-                               <table cellpadding="4">
-                                  <tr>
-                                     <td><img src="{{asset('img/6.png')}}" width="60" class="img-circle" /></td>
-                                     <td class="news-running">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim... 
-                                     <br><a href="#">Read more...</a></td>
-                                  </tr>
-                               </table>
-                            </li>
-                            <li class="news-item">
-                               <table cellpadding="4">
-                                  <tr>
-                                     <td><img src="{{asset('img/7.png')}}" width="60" class="img-circle" /></td>
-                                     <td class="news-running">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim...
-                                     <br><a href="#">Read more...</a></td>
-                                  </tr>
-                               </table>
-                            </li>
+                              <table cellpadding="4">
+                                 <tr>
+                                    <td>
+                                    </td>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </li>
+                           <li class="news-item">
+                              <table cellpadding="4">
+                                 <tr>
+                                    <td>
+                                    </td>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </li>
+                           <li class="news-item">
+                              <table cellpadding="4">
+                                 <tr>
+                                    <td>
+                                    </td>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </li>
                          </ul>
                       </div>
                    </div>
@@ -255,66 +235,35 @@
                    <div class="row">
                       <div class="col-xs-12">
                          <ul class="demo1">
-                            <li class="news-item">
-                               <table cellpadding="4">
+                            <li class="news-item" >
+                               <table cellpadding="5">
                                   <tr>
-                                     <td><img src="{{asset('img/1.png')}}" width="60" class="img-circle" /></td>
-                                     <td class="news-running">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim...
-                                     <br><a href="#">Read more...</a></td>
+                                     <td><img src="{{asset('img/pearlvaly.jpg')}}" width="60" /></td>
+                                     <td class="news-running">Pearl Valley</a></td>
+                                  </tr>
+                               </table>
+                            </li>
+                            <li class="news-item">
+                               <table cellpadding="5">
+                                  <tr>
+                                     <td><img src="{{asset('img/cantboard.jpeg')}}" width="60" /></td>
+                                     <td class="news-running">Cantonment Board Issue</a></td>
                                   </tr>
                                </table>
                             </li>
                             <li class="news-item">
                                <table cellpadding="4">
                                   <tr>
-                                     <td><img src="{{asset('img/2.png')}}" width="60" class="img-circle" /></td>
-                                     <td class="news-running">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim... 
-                                     <br><a href="#">Read more...</a></td>
+                                     <td><img src="{{asset('img/admopen.jpg')}}" width="60"/></td>
+                                     <td class="news-running">Admission Open</a></td>
                                   </tr>
                                </table>
                             </li>
                             <li class="news-item">
                                <table cellpadding="4">
                                   <tr>
-                                     <td><img src="{{asset('img/3.png')}}" width="60" class="img-circle" /></td>
-                                     <td class="news-running">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim... 
-                                     <br><a href="#">Read more...</a></td>
-                                  </tr>
-                               </table>
-                            </li>
-                            <li class="news-item">
-                               <table cellpadding="4">
-                                  <tr>
-                                     <td><img src="{{asset('img/4.png')}}" width="60" class="img-circle" /></td>
-                                     <td class="news-running">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim... 
-                                     <br><a href="#">Read more...</a></td>
-                                  </tr>
-                               </table>
-                            </li>
-                            <li class="news-item">
-                               <table cellpadding="4">
-                                  <tr>
-                                     <td><img src="{{asset('img/5.png')}}" width="60" class="img-circle" /></td>
-                                     <td class="news-running">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim...
-                                     <br><a href="#">Read more...</a></td>
-                                  </tr>
-                               </table>
-                            </li>
-                            <li class="news-item">
-                               <table cellpadding="4">
-                                  <tr>
-                                     <td><img src="{{asset('img/6.png')}}" width="60" class="img-circle" /></td>
-                                     <td class="news-running">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim... 
-                                     <br><a href="#">Read more...</a></td>
-                                  </tr>
-                               </table>
-                            </li>
-                            <li class="news-item">
-                               <table cellpadding="4">
-                                  <tr>
-                                     <td><img src="{{asset('img/7.png')}}" width="60" class="img-circle" /></td>
-                                     <td class="news-running">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in venenatis enim...
-                                     <br><a href="#">Read more...</a></td>
+                                     <td><img src="{{asset('img/freeadm.jpg')}}" width="60" /></td>
+                                     <td class="news-running">Free Admission</a></td>
                                   </tr>
                                </table>
                             </li>
@@ -349,11 +298,11 @@
                    <span id="right-arrow" class="arrow right fa fa-chevron-right"></span>
                    <span id="left-arrow" class="arrow left fa fa-chevron-left "></span>
                    <ul id="testim-dots" class="dots">
-                      <li class="dot active"></li><!--
-                      --><li class="dot"></li><!--
-                      --><li class="dot"></li><!--
-                      --><li class="dot"></li><!--
-                      --><li class="dot"></li>
+                      <li class="dot active"></li>
+                      <li class="dot"></li>
+                      {{-- <li class="dot"></li>
+                      <li class="dot"></li>
+                      <li class="dot"></li> --}}
                    </ul>
                    <div id="testim-content" class="cont">                    
                       <div class="active">
@@ -370,23 +319,23 @@
                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>                    
                       </div>
 
-                      <div>
+                      {{-- <div>
                             <div class="img"><img src="https://image.ibb.co/iN3qES/pexels_photo_324658.jpg" alt=""></div>
                             <div class="h4">Kellie</div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>                    
-                      </div>
+                      </div> --}}
 
-                      <div>
+                      {{-- <div>
                             <div class="img"><img src="https://image.ibb.co/kL6AES/Top_SA_Nicky_Oppenheimer.jpg" alt=""></div>
                             <div class="h4">Jessica</div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>                    
-                      </div>
+                      </div> --}}
 
-                      <div>
+                      {{-- <div>
                             <div class="img"><img src="https://image.ibb.co/gUPag7/image.jpg" alt=""></div>
                             <div class="h4">Kellie</div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>                    
-                      </div>
+                      </div> --}}
                    </div>
                 </div>
              </div>

@@ -141,7 +141,7 @@
             <div class="dropdown-container">
               <a class="dropdown-item" href="#">View news</a>
               <a class="dropdown-item" href="#">view Events</a>
-              <a class="dropdown-item" href="{{route('shownews')}}">Add News</a>
+              <a class="dropdown-item" href="#">Add News</a>
               <a class="dropdown-item" href="#">Add Events</a>
 
             </div>

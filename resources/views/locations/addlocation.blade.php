@@ -226,7 +226,7 @@
                                 <label style="font-weight:bold" class="" for="subarea_name">Sub-Area Name</label>
                             </div>
                             <div class="col-md-8">
-                                <input required disabled type="text" id="subarea_name" name="subarea_name" class="form-control form-control-alternative subarea_name" 
+                                <input required disabled type="text" id="subarea_name" value="NA" name="subarea_name" class="form-control form-control-alternative subarea_name" 
                                 placeholder="Sub-Area Name">
                                 @error('subarea_name')
                                     <span class="ml-auto mr-auto" style="color:red">{{$message}}</span>

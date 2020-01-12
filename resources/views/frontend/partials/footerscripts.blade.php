@@ -18,7 +18,7 @@
              autoplay: true,
              pauseOnHover:true,
              direction: 'up',
-             newsTickerInterval: 500,
+             newsTickerInterval: 2000,
              onToDo: function () {
                  //console.log(this);
              }
