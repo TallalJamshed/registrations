@@ -42,7 +42,9 @@
                             </td>
                             <td>
                                 <span class="btn btn-sm btn-warning"><i class="fas fa-pencil-alt"></i></span>
-                                <span class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></span>
+                                @if(Auth::user()->fk_role_id == 1)
+                                    <span class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></span>
+                                @endif
                             </td>
                         </tr>
                     @endforeach

@@ -30,6 +30,8 @@ class RegisterController extends Controller
      * @var string
      */
     protected $redirectTo = RouteServiceProvider::HOME;
+    // protected $redirectTo = '/addusers';
+
 
     /**
      * Create a new controller instance.
@@ -38,7 +40,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        // $this->middleware('guest');
     }
 
     /**
@@ -55,8 +57,8 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             // 'contact' => ['required','integer'],
-            'cnic' => ['required','integer'],
-            'role' => ['required']
+            'cnic' => ['required','regex:/^[0-9]{5}-[0-9]{7}-[0-9]{1}$/'],
+            'fk_role_id' => ['required']
         ]);
     }
 
@@ -68,13 +70,14 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        // dd($data);
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             // 'contact' => $data['contact'],
             'cnic' => $data['cnic'],
-            'role' => $data['role']
+            'fk_role_id' => $data['fk_role_id']
         ]);
     }
 }

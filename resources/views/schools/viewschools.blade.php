@@ -44,13 +44,42 @@
                                 {{$school->status_name}}
                             </td>
                             <td>
-                                <span class="btn btn-sm btn-warning"><i class="fas fa-pencil-alt"></i></span>
-                                <span class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></span>
+                                <a href="/school/edit/{{$school->sc_br_id}}" class="btn btn-sm btn-warning"><i class="fas fa-pencil-alt"></i></a>
+                                @if(Auth::user()->fk_role_id == 1)
+                                    <span data-delid="{{Crypt::encrypt($school->sc_br_id)}}" data-toggle="modal" data-target="#delete_modal" class="btn btn-sm btn-danger delid"><i class="fa fa-trash"></i></span>
+                                @endif
                             </td>
                         </tr>
                     @endforeach
                     </tbody>
                 </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="delete_modal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Delete Confirmaiton</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="alert alert-danger" role="alert">
+                    Are you sure you want to delete selected record?
+                </div>
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                <form method="POST" action="{{route('deleteschoolbranchindb')}}">
+                    @csrf
+                    <input type="hidden" name="delete" value="" id="id-to-delete" />
+                    <button type="submit" class="btn btn-danger"> Yes </button>
+                </form>
             </div>
         </div>
     </div>

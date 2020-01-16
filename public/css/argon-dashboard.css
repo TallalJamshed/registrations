@@ -20713,4 +20713,16 @@ pre>code.highlight {
   display: block;
   width: 50%;
 }
+.black-font{
+  color:black;
+  /* font-weight:500; */
+}
+.no-pad1{
+  padding-right:0px;
+}
+.no-pad2{
+  padding-left:0px;
+  padding-right:0px;
+
+}
 /*# sourceMappingURL=dashboard-free.css.map */

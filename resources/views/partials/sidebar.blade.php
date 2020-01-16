@@ -92,6 +92,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-btn @if(\Request::route()->getName() == 'home') active @endif" href="{{route('admin')}}"> <i class="fa fa-home text-primary"></i>Home</a>
           </li>
+@if (Auth::user()->fk_role_id == 1)
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-btn" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fas fa-user-friends text-blue"></i> Manage Users <i class="fa fa-caret-down dropbtn"></i>
@@ -101,6 +102,8 @@
               <a class="dropdown-item @if(\Request::route()->getName() == 'adduser') active @endif" href="{{route('adduser')}}">Add Users</a>
             </div>
           </li>
+@endif
+
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-btn" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fas fa-school text-orange"></i> Manage Schools <i class="fa fa-caret-down dropbtn"></i>

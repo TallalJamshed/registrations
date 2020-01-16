@@ -23,8 +23,9 @@
                             <label style="font-weight:bold" class="" for="school_name">School Name</label>
                         </div>
                         <div style="display:inline-block; padding:10px; min-width:50%; max-width:80%">
-                            <input type="text" id="school_name" name="school_name" class="form-control form-control-alternative"
-                            older="School Name">
+                            <input type="text" id="school_name" name="school_name" value="{{ old('school_name') }}" autocomplete="school_name"
+                             class="form-control form-control-alternative"
+                            placeholder="School Name">
                         </div>
                         <div class="row">
                             @error('school_name')
@@ -83,7 +84,7 @@
                                 <label style="font-weight:bold" class="" for="sc_br_name">Branch Name</label>
                             </div>
                             <div class="col-md-10">
-                                <input type="text" id="sc_br_name" name="sc_br_name" class="disable_on_sc_id form-control form-control-alternative" 
+                                <input type="text" id="sc_br_name" name="sc_br_name" value="{{ old('sc_br_name') }}" autocomplete="sc_br_name" class="disable_on_sc_id form-control form-control-alternative" 
                                 placeholder="Branch Name">
                             </div>
                             <div class="row" style="text-align:center">
@@ -101,7 +102,7 @@
                                 <label style="font-weight:bold" class="" for="sc_br_address">School Address <sub>*only house and street address</sub></label>
                             </div>
                             <div class="col-md-10">
-                                <input type="text" id="sc_br_address" name="sc_br_address" class="disable_on_sc_id form-control form-control-alternative" 
+                                <input type="text" id="sc_br_address" name="sc_br_address" value="{{ old('sc_br_address') }}" autocomplete="sc_br_address" class="disable_on_sc_id form-control form-control-alternative" 
                                 placeholder="School Address">
                             </div>
                             <div class="row" style="text-align:center">
@@ -142,7 +143,7 @@
                                 <label style="font-weight:bold" class="" for="no_of_boys">No of Boys</label>
                             </div>
                             <div class="col-md-10">
-                                <input type="text" id="no_of_boys" name="no_of_boys" class="disable_on_sc_id form-control form-control-alternative" 
+                                <input type="text" id="no_of_boys" name="no_of_boys" value="{{ old('no_of_boys') }}" autocomplete="no_of_boys" class="disable_on_sc_id form-control form-control-alternative" 
                                 placeholder="Number of Boys">
                             </div>
                             <div class="row" style="text-align:center">
@@ -158,7 +159,7 @@
                                 <label style="font-weight:bold" class="" for="no_of_girls">No of Girls</label>
                             </div>
                             <div class="col-md-10">
-                                <input type="text" id="no_of_girls" name="no_of_girls" class="disable_on_sc_id form-control form-control-alternative" 
+                                <input type="text" id="no_of_girls" name="no_of_girls" value="{{ old('no_of_girls') }}" autocomplete="no_of_girls" class="disable_on_sc_id form-control form-control-alternative" 
                                 placeholder="Number of girls">
                             </div>
                             <div class="row" style="text-align:center">
@@ -176,7 +177,7 @@
                                 <label style="font-weight:bold" class="" for="sc_br_covered_area">Covered Area</label>
                             </div>
                             <div class="col-md-10">
-                                <input type="text" id="sc_br_covered_area" name="sc_br_covered_area" class="disable_on_sc_id form-control form-control-alternative" 
+                                <input type="text" id="sc_br_covered_area" name="sc_br_covered_area" value="{{ old('sc_br_covered_area') }}" autocomplete="sc_br_covered_area" class="disable_on_sc_id form-control form-control-alternative" 
                                 placeholder="Total Covered Area">
                             </div>
                             <div class="row" style="text-align:center">
@@ -192,7 +193,7 @@
                                 <label style="font-weight:bold" class="" for="no_of_teachers">No of Teachers</label>
                             </div>
                             <div class="col-md-10">
-                                <input type="text" id="no_of_teachers" name="no_of_teachers" class="disable_on_sc_id form-control form-control-alternative" 
+                                <input type="text" id="no_of_teachers" name="no_of_teachers" value="{{ old('no_of_teachers') }}" autocomplete="no_of_teachers" class="disable_on_sc_id form-control form-control-alternative" 
                                 placeholder="Number Of Teachers">
                             </div>
                             <div class="row" style="text-align:center">
@@ -215,7 +216,7 @@
                                 <label style="font-weight:bold" class="" for="owner_name">Owner Name</label>
                             </div>
                             <div class="col-md-10">
-                                <input type="text" id="owner_name" name="owner_name" class="disable_on_sc_id form-control form-control-alternative" 
+                                <input type="text" id="owner_name" name="owner_name" value="{{ old('owner_name') }}" autocomplete="owner_name" class="disable_on_sc_id form-control form-control-alternative" 
                                 placeholder="Owner Name">
                             </div>
                             <div class="row" style="text-align:center">
@@ -231,7 +232,7 @@
                                 <label style="font-weight:bold" class="" for="owner_phone">Owner Phone No</label>
                             </div>
                             <div class="col-md-10">
-                                <input type="text" id="owner_phone" name="owner_phone" class="disable_on_sc_id form-control form-control-alternative" 
+                                <input type="text" id="owner_phone" name="owner_phone" value="{{ old('owner_phone') }}" autocomplete="owner_phone" class="disable_on_sc_id form-control form-control-alternative" 
                                 placeholder="Owner Number">
                             </div>
                             <div class="row" style="text-align:center">
@@ -249,7 +250,7 @@
                                 <label style="font-weight:bold" class="" for="owner_email">Owner Email</label>
                             </div>
                             <div class="col-md-10">
-                                <input type="text" id="owner_email" name="owner_email" class="disable_on_sc_id form-control form-control-alternative" 
+                                <input type="text" id="owner_email" name="owner_email" value="{{ old('owner_email') }}" autocomplete="owner_email" class="disable_on_sc_id form-control form-control-alternative" 
                                 placeholder="Owner Email">
                             </div>
                             <div class="row" style="text-align:center">
@@ -272,7 +273,7 @@
                                 <label style="font-weight:bold" class="" for="principal_name">Principal Name</label>
                             </div>
                             <div class="col-md-10">
-                                <input type="text" id="principal_name" name="principal_name" class="disable_on_sc_id form-control form-control-alternative" 
+                                <input type="text" id="principal_name" name="principal_name" value="{{ old('principal_name') }}" autocomplete="principal_name" class="disable_on_sc_id form-control form-control-alternative" 
                                 placeholder="Principal Name">
                             </div>
                             <div class="row" style="text-align:center">
@@ -288,7 +289,7 @@
                                 <label style="font-weight:bold" class="" for="principal_phone">Principal Phone No</label>
                             </div>
                             <div class="col-md-10">
-                                <input type="text" id="principal_phone" name="principal_phone" class="disable_on_sc_id form-control form-control-alternative" 
+                                <input type="text" id="principal_phone" name="principal_phone" value="{{ old('principal_phone') }}" autocomplete="principal_phone" class="disable_on_sc_id form-control form-control-alternative" 
                                 placeholder="Principal Number">
                             </div>
                             <div class="row" style="text-align:center">
@@ -306,7 +307,7 @@
                                 <label style="font-weight:bold" class="" for="principal_email">Principal Email</label>
                             </div>
                             <div class="col-md-10">
-                                <input type="text" id="principal_email" name="principal_email" class="disable_on_sc_id form-control form-control-alternative" 
+                                <input type="text" id="principal_email" name="principal_email" value="{{ old('principal_email') }}" autocomplete="principal_email" class="disable_on_sc_id form-control form-control-alternative" 
                                 placeholder="Principal Email">
                             </div>
                             <div class="row" style="text-align:center">
@@ -382,7 +383,7 @@
                                 <label style="font-weight:bold" class="" for="latitude">Latitude</label>
                             </div>
                             <div class="col-md-10">
-                                <input  type="text" id="latitude" name="latitude" class="form-control form-control-alternative" 
+                                <input  type="text" id="latitude" name="latitude" value="{{ old('latitude') }}" autocomplete="latitude" class="form-control form-control-alternative" 
                                 placeholder="Latitude">
                             </div>
                             <div class="row" style="text-align:center">
@@ -398,7 +399,7 @@
                                 <label style="font-weight:bold" class="" for="longitude">Longitude</label>
                             </div>
                             <div class="col-md-10">
-                                <input  type="text" id="longitude" name="longitude" class="form-control form-control-alternative" 
+                                <input  type="text" id="longitude" name="longitude" value="{{ old('longitude') }}" autocomplete="longitude" class="form-control form-control-alternative" 
                                 placeholder="Longitude">
                             </div>
                             <div class="row" style="text-align:center">
@@ -416,7 +417,7 @@
                                 <label style="font-weight:bold" class="" for="location_string">Location String</label>
                             </div>
                             <div class="col-md-10">
-                                <input  type="text" id="location_string" name="location_string" class="form-control form-control-alternative" 
+                                <input  type="text" id="location_string" name="location_string" value="{{ old('location_string') }}" autocomplete="location_string" class="form-control form-control-alternative" 
                                 placeholder="Location String">
                             </div>
                             <div class="row" style="text-align:center">

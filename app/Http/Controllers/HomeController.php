@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\User;
 use App\School;
+use App\Roles;
 use DB;
 // use App\Schoolbranch;
 use Illuminate\Http\Request;
@@ -47,6 +48,7 @@ class HomeController extends Controller
     }
     public function adduser()
     {
-        return view('users.addusers');
+        $roles = Roles::get();
+        return view('users.addusers')->with('roles',$roles);
     }
 }

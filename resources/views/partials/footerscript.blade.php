@@ -401,3 +401,9 @@
     })
   });
 </script>
+
+<script>
+  $(".delid").click(function(){
+      $("#id-to-delete").val($(this).data('delid'));
+  });
+</script>

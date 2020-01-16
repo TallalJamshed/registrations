@@ -62,7 +62,22 @@ Route::post('/getschool','SchoolController@getSchools');
 
 // School Branch
 Route::post('/school/addbranch','SchoolbranchController@addSchoolBranchInDb')->name('addschoolbranchindb');
+Route::post('/school/updatebranch','SchoolbranchController@updateSchoolBranchInDb')->name('updateschoolbranchindb');
+Route::post('/school/delete','SchoolbranchController@deleteSchoolBranchInDb')->name('deleteschoolbranchindb');
 
+
+Route::get('/school/edit/{id}',function($id){
+    return view('schools.editschool')
+            ->with('school',App\SchoolBranch::join('schools','schools.school_id','schoolbranches.fk_school_id')
+                                            ->join('institutestatus','schoolbranches.sc_br_status','institutestatus.status_id')
+                                            ->join('subareas','schoolbranches.fk_subarea_id','subareas.subarea_id')
+                                            ->join('areas','areas.area_id','subareas.fk_area_id')
+                                            ->join('cities','cities.city_id','areas.fk_city_id')
+                                            ->join('provinces','provinces.province_id','cities.fk_province_id')
+                                            ->find($id))
+            ->with('areas' , App\Area::get())
+            ->with('status' , App\institutestatus::get());
+});
 
 // ajax
 Route::post('/cities' , 'LocationController@getCitiesByProvince')->name('getcity');

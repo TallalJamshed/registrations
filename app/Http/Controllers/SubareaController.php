@@ -62,7 +62,7 @@ class SubareaController extends Controller
      */
     public function edit(Subarea $subarea)
     {
-        //
+        
     }
 
     /**

@@ -8,17 +8,17 @@
                 <div class="card-header">{{ __('Register New User') }}</div>
 
                 <div class="card-body">
+                    {{$errors}}
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
-
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" autocomplete="name" autofocus>
 
                                 @error('name')
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="ml-auto mr-auto" style="color:red">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -29,10 +29,10 @@
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email">
 
                                 @error('email')
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="ml-auto mr-auto" style="color:red">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -43,10 +43,10 @@
                             <label for="contact" class="col-md-4 col-form-label text-md-right">{{ __('Contact Number') }}</label>
 
                             <div class="col-md-6">
-                                <input id="contact" type="number" class="form-control @error('contact') is-invalid @enderror" name="contact" value="{{ old('contact') }}" required autocomplete="contact">
+                                <input id="contact" type="number" class="form-control @error('contact') is-invalid @enderror" name="contact" value="{{ old('contact') }}" autocomplete="contact">
 
                                 @error('contact')
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="ml-auto mr-auto" style="color:red">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -57,10 +57,10 @@
                             <label for="cnic" class="col-md-4 col-form-label text-md-right">{{ __('CNIC') }}</label>
 
                             <div class="col-md-6">
-                                <input id="cnic" type="number" class="form-control @error('cnic') is-invalid @enderror" name="cnic" value="{{ old('cnic') }}" required autocomplete="cnic">
+                                <input id="cnic" type="text" class="form-control @error('cnic') is-invalid @enderror" name="cnic" value="{{ old('cnic') }}" autocomplete="cnic">
 
                                 @error('cnic')
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="ml-auto mr-auto" style="color:red">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -71,10 +71,16 @@
                             <label for="role" class="col-md-4 col-form-label text-md-right">{{ __('Role') }}</label>
 
                             <div class="col-md-6">
-                                <input id="role" type="text" class="form-control @error('role') is-invalid @enderror" name="role" value="{{ old('role') }}" required autocomplete="role">
+                                <select name="fk_role_id" id="fk_role_id" class="form-control">
+                                    <option value=""></option>
+                                    @foreach ($roles as $role)
+                                        <option value="{{$role->role_id}}">{{$role->role_name}}</option>
+                                    @endforeach
+                                </select>
+                                {{-- <input id="role" type="text" class="form-control @error('role') is-invalid @enderror" name="role" value="{{ old('role') }}" autocomplete="role"> --}}
 
                                 @error('role')
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="ml-auto mr-auto" style="color:red">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -85,10 +91,10 @@
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="new-password">
 
                                 @error('password')
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="ml-auto mr-auto" style="color:red">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -99,7 +105,7 @@
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" autocomplete="new-password">
                             </div>
                         </div>
 
