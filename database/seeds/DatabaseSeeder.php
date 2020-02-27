@@ -13,12 +13,14 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(
             [
-                ProvinceTableSeeder::class , 
-                CityTableSeeder::class , 
-                AreaTableSeeder::class , 
-                SubareaTableSeeder::class,
-                SchoolTableSeeder::class,
-                StatusTableSeeder::class,
+                // ProvinceTableSeeder::class , 
+                // CityTableSeeder::class , 
+                // AreaTableSeeder::class , 
+                // SubareaTableSeeder::class,
+                // SchoolTableSeeder::class,
+                // StatusTableSeeder::class,
+                RolesTableSeeder::class,
+
             ]
         );
     }

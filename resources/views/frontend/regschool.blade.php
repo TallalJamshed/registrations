@@ -12,182 +12,127 @@
 
 
                 <div class="row school-reg">
-
-
                 	<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
                         <div class="md-form">
                             <label for="email" class="">School/College Name</label>
-                             <input type="text" id="name" name="name" class="form-control">
+                            <input type="text" id="name" name="name" class="form-control">
                         </div>
                     </div>
-
-                    <!--Grid column-->
-                    <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                        <div class="md-form">
-                            <label for="name" class="">NGO/Society Name</label>
-                             <select class="form-control">
-                             	<option value="Boys">Education Type</option>
-                               <option value="Boys">Boys</option>
-                               <option value="Girls">Girls</option>
-                               <option value="Combined">Combined</option>
-                             </select>
-                        </div>
-                    </div>
-                    
-                    <!--Grid column-->
-                    <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                        <div class="md-form">
-                            <label for="email" class="">Establish Date</label>
-                            	<input type="text" id="name" name="name" class="form-control">
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="row school-reg">
-                    <!--Grid column-->
-                    <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                        <div class="md-form">
-                            <label for="name" class="">School/College Address</label>
-                             <select class="form-control">
-                             	<option value="Boys">Education Type</option>
-                               <option value="Boys">Boys</option>
-                               <option value="Girls">Girls</option>
-                               <option value="Combined">Combined</option>
-                             </select>
-                        </div>
-                    </div>
-                    <!--Grid column-->
-                    <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                        <div class="md-form">
-                            <label for="email" class="">School/College Level</label>
-                             <input type="text" id="name" name="name" class="form-control">
-                        </div>
-                    </div>
-                    <!--Grid column-->
                     <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
                         <div class="md-form">
                             <label for="email" class="">Principal Name</label>
-                            	<input type="text" id="name" name="name" class="form-control">
+                            <input type="text" id="name" name="name" class="form-control">
                         </div>
                     </div>
-                </div>
-
-                <div class="row school-reg">
-                    <!--Grid column-->
-                    <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                        <div class="md-form">
-                            <label for="name" class="">School/College Contact</label>
-                             <input type="text" id="name" name="name" class="form-control">
-                        </div>
-                    </div>
-                    <!--Grid column-->
                     <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
                         <div class="md-form">
                             <label for="email" class="">Principal Contact</label>
+                            <input type="text" id="name" name="name" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row school-reg">
+                    <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                        <div class="md-form">
+                            <label for="email" class="">School/College Level</label>
+                            <select class="form-control">
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                        <div class="md-form">
+                            <label for="email" class="">School Type</label>
+                            <select class="form-control">
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="md-form">
+                            <label for="name" class="">Instruction Medium</label>
+                            <select class="form-control">
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row school-reg">
+                   <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                       <div class="md-form">
+                            <label for="name" class="">No of Boys</label>
+                            <input type="text" id="name" name="name" class="form-control">
+                       </div>
+                   </div>
+                   <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                        <div class="md-form">
+                            <label for="name" class="">No of Girls</label>
+                            <input type="text" id="name" name="name" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                        <div class="md-form">
+                            <label for="name" class="">Number of Teaching Staff</label>
+                            <input type="text" id="name" name="name" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row school-reg">
+                   <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                       <div class="md-form">
+                            <label for="name" class="">Province</label>
+                            <input type="text" id="name" name="name" class="form-control">
+                       </div>
+                   </div>
+                   <!--Grid column-->
+                   <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                       <div class="md-form">
+                            <label for="name" class="">City</label>
+                            <select class="form-control">
+                                <option value=""></option>
+                            </select>
+                       </div>
+                   </div>
+                   <!--Grid column-->
+                   <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                       <div class="md-form">
+                           <label for="name" class="">Area</label>
+                            <select class="form-control">
+                             	<option value=""></option>
+                            </select>
+                        </div>
+                    </div>
+                   <!--Grid column-->
+                </div>
+
+                <div class="row school-reg">
+                    <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                        <div class="md-form">
+                             <label for="name" class="">Sub Area</label>
                              <input type="text" id="name" name="name" class="form-control">
                         </div>
                     </div>
                     <!--Grid column-->
                     <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
                         <div class="md-form">
-                            <label for="email" class="">Education Type</label>
-                            	<select class="form-control">
-                             	<option value="Boys">Education Type</option>
-                               <option value="Boys">Boys</option>
-                               <option value="Girls">Girls</option>
-                               <option value="Combined">Combined</option>
-                             </select>
+                             <label for="name" class="">House-street address</label>
+                             <input type="text" id="name" name="name" class="form-control">
                         </div>
                     </div>
-                </div>
+                    <!--Grid column-->
+                    <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                        <div class="md-form">
+                            <label for="name" class="">Covered Area</label>
+                            <input type="text" id="name" name="name" class="form-control">
+                         </div>
+                     </div>
+                    <!--Grid column-->
+                 </div>
 
-                <div class="row school-reg">
-                   <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                       <div class="md-form">
-                           <label for="name" class="">Building Stories</label>
-                            <input type="text" id="name" name="name" class="form-control">
-                       </div>
-                   </div>
-                   <!--Grid column-->
-                   <div class="col-md-4">
-                       <div class="md-form">
-                           <label for="name" class="">Instruction Medium</label>
-                            <select class="form-control">
-                             	<option value="Boys">Education Type</option>
-                               <option value="Boys">Boys</option>
-                               <option value="Girls">Girls</option>
-                               <option value="Combined">Combined</option>
-                             </select>
-                       </div>
-                   </div>
-                   <!--Grid column-->
-                   <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                       <div class="md-form">
-                           <label for="name" class="">Student Strength</label>
-                            <input type="text" id="name" name="name" class="form-control">
-                       </div>
-                   </div>
-                   <!--Grid column-->
-                </div>
-
-                <div class="row school-reg">
-                   <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                       <div class="md-form">
-                           <label for="name" class="">Division</label>
-                            <input type="text" id="name" name="name" class="form-control">
-                       </div>
-                   </div>
-                   <!--Grid column-->
-                   <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                       <div class="md-form">
-                           <label for="name" class="">Disttrict</label>
-                            <select class="form-control">
-                             	<option value="Boys">Education Type</option>
-                               <option value="Boys">Boys</option>
-                               <option value="Girls">Girls</option>
-                               <option value="Combined">Combined</option>
-                             </select>
-                       </div>
-                   </div>
-                   <!--Grid column-->
-                   <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                       <div class="md-form">
-                           <label for="name" class="">Tehsil</label>
-                            <select class="form-control">
-                             	<option value="Boys">Education Type</option>
-                               <option value="Boys">Boys</option>
-                               <option value="Girls">Girls</option>
-                               <option value="Combined">Combined</option>
-                             </select>
-                       </div>
-                   </div>
-                   <!--Grid column-->
-                </div>
-
-                <div class="row school-reg">
-                   <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                       <div class="md-form">
-                           <label for="name" class="">Tuition Fee</label>
-                            <input type="text" id="name" name="name" class="form-control">
-                       </div>
-                   </div>
-                   <!--Grid column-->
-                   <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                       <div class="md-form">
-                           <label for="name" class="">Admission Fee</label>
-                            <input type="text" id="name" name="name" class="form-control">
-                       </div>
-                   </div>
-                   <!--Grid column-->
-                   <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                       <div class="md-form">
-                           <label for="name" class="">Number of Teaching Staff</label>
-                            <input type="text" id="name" name="name" class="form-control">
-                       </div>
-                   </div>
-                   <!--Grid column-->
-                </div>
             </form>
 
             <div class="center-on-small-only">

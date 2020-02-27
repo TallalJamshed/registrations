@@ -57,7 +57,7 @@
                             <label for="cnic" class="col-md-4 col-form-label text-md-right">{{ __('CNIC') }}</label>
 
                             <div class="col-md-6">
-                                <input id="cnic" type="number" class="form-control @error('cnic') is-invalid @enderror" name="cnic" value="{{ old('cnic') }}" required autocomplete="cnic">
+                                <input id="cnic" type="text" class="form-control @error('cnic') is-invalid @enderror" name="cnic" value="{{ old('cnic') }}" required autocomplete="cnic">
 
                                 @error('cnic')
                                     <span class="invalid-feedback" role="alert">
@@ -71,7 +71,7 @@
                             <label for="role" class="col-md-4 col-form-label text-md-right">{{ __('Role') }}</label>
 
                             <div class="col-md-6">
-                                <input id="role" type="text" class="form-control @error('role') is-invalid @enderror" name="role" value="{{ old('role') }}" required autocomplete="role">
+                                <input id="fk_role_id" type="text" class="form-control @error('role') is-invalid @enderror" name="fk_role_id" value="{{ old('fk_role_id') }}" required autocomplete="fk_role_id">
 
                                 @error('role')
                                     <span class="invalid-feedback" role="alert">

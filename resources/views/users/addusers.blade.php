@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Register New User') }}</div>
 
                 <div class="card-body">
-                    {{$errors}}
+                    {{-- {{$errors}} --}}
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
                         <div class="form-group row">
@@ -77,6 +77,7 @@
                                         <option value="{{$role->role_id}}">{{$role->role_name}}</option>
                                     @endforeach
                                 </select>
+
                                 {{-- <input id="role" type="text" class="form-control @error('role') is-invalid @enderror" name="role" value="{{ old('role') }}" autocomplete="role"> --}}
 
                                 @error('role')

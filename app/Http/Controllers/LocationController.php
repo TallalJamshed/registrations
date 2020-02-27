@@ -7,7 +7,7 @@ use App\Subarea;
 use App\Province;
 use App\City;
 use App\School;
-
+use App\District;
 use Illuminate\Support\Facades\validator;
 use Illuminate\Http\Request;
 use Session;
@@ -112,10 +112,16 @@ class LocationController extends Controller
         Session::flash('alert-class', 'alert-success'); 
         return redirect()->back();
     }
-
-    public function getCitiesByProvince(Request $request)
+    
+    public function getDistrictsByProvince(Request $request)
     {
-        $cities = City::select('city_id','city_name')->where('fk_province_id',$request->fk_province_id)->get();
+        $districts = District::select('district_id','district_name')->where('fk_province_id',$request->fk_province_id)->get();
+        return $districts;
+    }
+
+    public function getCitiesByDistricts(Request $request)
+    {
+        $cities = City::select('city_id','city_name')->where('fk_district_id',$request->fk_district_id)->get();
         return $cities;
     }
 
@@ -133,56 +139,111 @@ class LocationController extends Controller
 
     public function showGeoLocatorPage(){
         $provinces = province::get();
-        return view('geolocator.viewgeolocator')->with('provinces',$provinces);
+        $districts = district::get();
+        $cities = city::get();
+        $areas = area::get();
+        $subareas = subarea::get();
+        $schools = school::get();
+
+        return view('geolocator.viewgeolocator')->with('provinces',$provinces)
+                                                ->with('districts',$districts)
+                                                ->with('cities',$cities)
+                                                ->with('areas',$areas)
+                                                ->with('subareas',$subareas)
+                                                ->with('schools',$schools);
     }
 
+    // public function getSchoolLoc(Request $request){
+    //     $locations  = schoolbranch::select('sc_br_status','latitude','longitude','subarea_name','school_name','sc_br_address','area_name','sc_br_id','')
+    //                                 ->join('subareas','subareas.subarea_id','schoolbranches.fk_subarea_id')
+    //                                 ->join('areas','areas.area_id','schoolbranches.fk_area_id')
+    //                                 ->get();
+    //     return $locations;
+    // }
+
     public function getMapLocation(Request $request){
-        $province = ""; $city = ""; $area = ""; $subarea = "";
+        $province = ""; $district=""; $city = ""; $area = ""; $subarea = ""; $school = "";
+        
         if(!empty($request->province)){
             $province = province::select('province_name')->where('province_id',$request->province)->first();
-            $schools  = school::select('school_name','sc_br_name','latitude','longitude')
+            $schools  = school::select('school_name','provinces.province_name','cities.city_name','sc_br_name','sc_br_address','latitude','longitude')
                                 ->join('schoolbranches','schools.school_id','schoolbranches.fk_school_id')
-                                ->join('subareas','subareas.subarea_id','schoolbranches.fk_subarea_id')
-                                ->join('areas','areas.area_id','subareas.fk_area_id')
-                                ->join('cities','cities.city_id','areas.fk_city_id')
-                                ->join('provinces','provinces.province_id','cities.fk_province_id')
-                                ->where('province_id',$request->province)->get();
+                                ->join('provinces','provinces.province_id','schoolbranches.fk_province_id')
+                                ->join('districts','districts.district_id','schoolbranches.fk_city_id')
+                                ->join('cities','cities.city_id','schoolbranches.fk_city_id')
+                                // ->join('areas','areas.area_id','schoolbranches.fk_area_id')
+                                // ->join('subareas','subareas.subarea_id','schoolbranches.fk_subarea_id')
+                                ->where('schoolbranches.fk_province_id',$request->province)->get();
+        }
+        if(!empty($request->district)){
+            $district = district::select('district_name')->where('district_id',$request->district)->first();
+            $schools  = school::select('school_name','provinces.province_name','cities.city_name','sc_br_name','latitude','longitude')
+                                ->join('schoolbranches','schools.school_id','schoolbranches.fk_school_id')
+                                ->join('provinces','provinces.province_id','schoolbranches.fk_province_id')
+                                ->join('districts','districts.district_id','schoolbranches.fk_district_id')
+                                ->join('cities','cities.city_id','schoolbranches.fk_city_id')
+                                // ->leftjoin('areas','areas.area_id','subareas.fk_area_id')
+                                // ->leftjoin('subareas','subareas.subarea_id','schoolbranches.fk_subarea_id')
+                                ->where('schoolbranches.fk_district_id',$request->district)->get();
         }
         if(!empty($request->city)){
             $city = city::select('city_name')->where('city_id',$request->city)->first();
-            $schools  = school::select('school_name','sc_br_name','latitude','longitude')
+            $schools  = school::select('school_name','provinces.province_name','cities.city_name','sc_br_name','latitude','longitude')
                                 ->join('schoolbranches','schools.school_id','schoolbranches.fk_school_id')
-                                ->join('subareas','subareas.subarea_id','schoolbranches.fk_subarea_id')
-                                ->join('areas','areas.area_id','subareas.fk_area_id')
-                                ->join('cities','cities.city_id','areas.fk_city_id')
-                                // ->join('provinces','provinces.province_id','cities.fk_province_id')
-                                ->where('city_id',$request->city)->get();
-        }
-        if(!empty($request->area)){
-            $area = area::select('area_name')->where('area_id',$request->area)->first();
-            $schools  = school::select('school_name','sc_br_name','latitude','longitude')
-                                ->join('schoolbranches','schools.school_id','schoolbranches.fk_school_id')
-                                ->join('subareas','subareas.subarea_id','schoolbranches.fk_subarea_id')
-                                ->join('areas','areas.area_id','subareas.fk_area_id')
-                                // ->join('cities','cities.city_id','areas.fk_city_id')
-                                // ->join('provinces','provinces.province_id','cities.fk_province_id')
-                                ->where('area_id',$request->area)->get();
-        }
-        if(!empty($request->subarea)){
-            $subarea = subarea::select('subarea_name')->where('subarea_id',$request->subarea)->first();
-            $schools  = school::select('school_name','sc_br_name','latitude','longitude')
-                                ->join('schoolbranches','schools.school_id','schoolbranches.fk_school_id')
-                                ->join('subareas','subareas.subarea_id','schoolbranches.fk_subarea_id')
+                                ->join('provinces','provinces.province_id','schoolbranches.fk_province_id')
+                                ->join('districts','districts.district_id','schoolbranches.fk_district_id')
+                                ->join('cities','cities.city_id','schoolbranches.fk_city_id')
                                 // ->join('areas','areas.area_id','subareas.fk_area_id')
                                 // ->join('cities','cities.city_id','areas.fk_city_id')
                                 // ->join('provinces','provinces.province_id','cities.fk_province_id')
-                                ->where('subarea_id',$request->subarea)->get();
+                                ->where('fk_city_id',$request->city)->get();
+        }
+        if(!empty($request->area)){
+            $area = area::select('area_name')->where('area_id',$request->area)->first();
+            $schools  = school::select('school_name','provinces.province_name','cities.city_name','sc_br_name','latitude','longitude')
+                                ->join('schoolbranches','schools.school_id','schoolbranches.fk_school_id')
+                                ->join('provinces','provinces.province_id','schoolbranches.fk_province_id')
+                                ->join('districts','districts.district_id','schoolbranches.fk_district_id')
+                                ->join('cities','cities.city_id','schoolbranches.fk_city_id')
+                                // ->join('subareas','subareas.subarea_id','schoolbranches.fk_subarea_id')
+                                // ->join('areas','areas.area_id','subareas.fk_area_id')
+                                // ->join('cities','cities.city_id','areas.fk_city_id')
+                                // ->join('provinces','provinces.province_id','cities.fk_province_id')
+                                ->where('fk_area_id',$request->area)->get();
+        }
+        if(!empty($request->subarea)){
+            $subarea = subarea::select('subarea_name')->where('subarea_id',$request->subarea)->first();
+            $schools  = school::select('school_name','provinces.province_name','cities.city_name','sc_br_name','latitude','longitude')
+                                ->join('schoolbranches','schools.school_id','schoolbranches.fk_school_id')
+                                ->join('provinces','provinces.province_id','schoolbranches.fk_province_id')
+                                ->join('districts','districts.district_id','schoolbranches.fk_district_id')
+                                ->join('cities','cities.city_id','schoolbranches.fk_city_id')
+                                // ->join('subareas','subareas.subarea_id','schoolbranches.fk_subarea_id')
+                                // ->join('areas','areas.area_id','subareas.fk_area_id')
+                                // ->join('cities','cities.city_id','areas.fk_city_id')
+                                // ->join('provinces','provinces.province_id','cities.fk_province_id')
+                                ->where('fk_subarea_id',$request->subarea)->get();
+        }
+        if(!empty($request->school)){
+            $school = school::select('school_name')->where('school_id',$request->school)->first();
+            $schools  = school::select('school_name','provinces.province_name','cities.city_name','sc_br_name','latitude','longitude')
+                                ->join('schoolbranches','schools.school_id','schoolbranches.fk_school_id')
+                                ->join('provinces','provinces.province_id','schoolbranches.fk_province_id')
+                                ->join('districts','districts.district_id','schoolbranches.fk_district_id')
+                                ->join('cities','cities.city_id','schoolbranches.fk_city_id')
+                                // ->join('subareas','subareas.subarea_id','schoolbranches.fk_subarea_id')
+                                // ->join('areas','areas.area_id','subareas.fk_area_id')
+                                // ->join('cities','cities.city_id','areas.fk_city_id')
+                                // ->join('provinces','provinces.province_id','cities.fk_province_id')
+                                ->where('fk_school_id',$request->school)->get();
         }
         $data = array([
             'province' => $province,
+            'district' => $district,
             'city' => $city,
             'area' => $area,
             'subarea' => $subarea,
+            'school' => $school,
             'schools' => $schools
         ]);
         return $data;

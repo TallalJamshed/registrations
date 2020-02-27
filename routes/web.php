@@ -30,7 +30,7 @@ Route::get('/ngo', function () {
 //     return view('home1');
 // })->name('admin')->middleware(['auth']);
 
-ROute::get('/reg-admin','HomeController@getDashboard')->name('admin')->middleware(['auth']);
+Route::get('/reg-admin','HomeController@getDashboard')->name('admin')->middleware(['auth']);
 Auth::routes();
 // users
 Route::get('/viewusers', 'HomeController@viewuser')->name('viewuser');
@@ -80,12 +80,12 @@ Route::get('/school/edit/{id}',function($id){
 });
 
 // ajax
-Route::post('/cities' , 'LocationController@getCitiesByProvince')->name('getcity');
+Route::post('/districts' , 'LocationController@getDistrictsByProvince')->name('getdistricts');
+Route::post('/cities' , 'LocationController@getCitiesByDistricts')->name('getcity');
 Route::post('/areas' , 'LocationController@getAreasByCity')->name('getarea');
 Route::post('/subareas' , 'LocationController@getSubAreasByArea')->name('getsubarea');
 Route::post('/schools' , 'SchoolController@getSchoolsBySubarea')->name('getschoolbysubarea');
 Route::post('/getmapdata' , 'LocationController@getMapLocation')->name('getmaplocation');
-
 
 
 
